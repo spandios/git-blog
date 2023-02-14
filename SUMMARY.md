@@ -60,9 +60,8 @@
     * [Pessimistic Lock(비관적 잠금)](architecture/ddd/transaction/pessimistic-lock.md)
     * [Optimistic Lock(낙관적 잠금)](architecture/ddd/transaction/optimistic-lock.md)
     * [Offline Pessimistic Lock(Offline 비관적 잠금)](architecture/ddd/transaction/offline-pessimistic-lock-offline.md)
-  * [도메인 모델과 바운디드 컨텍스트](architecture/ddd/bounded-context/README.md)
-    * [바운디드 컨텍스트](architecture/ddd/bounded-context/undefined.md)
-    * [바운디드 컨텍스트 간 관계](architecture/ddd/bounded-context/undefined-1.md)
+  * [바운디드 컨텍스트](architecture/ddd/bounded-context/README.md)
+    * [바운디드 컨텍스트 간 관계](architecture/ddd/bounded-context/undefined.md)
 
 ***
 
