@@ -115,7 +115,7 @@ public class Order{
 
 밸류타입의 객체를 컬렉션으로 저장하려면 @ElementCollection, @CollectionTable을 사용하면 된다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-02-09 오후 12.16.05.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-09 오후 12.16.05.png" alt=""><figcaption></figcaption></figure>
 
 ```java
 @Entity
@@ -165,7 +165,7 @@ public class Order{
 애그리거트에서 루트 엔티티를 뺀 나머지 구성요소는 대부분 밸류이다
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-02-09 오후 1.16.30.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-09 오후 1.16.30.png" alt=""><figcaption></figcaption></figure>
 
 Article과 ArticleContent가 있다고 했을 때 1-1연관으로 매핑은 잘못된 매핑이다.
 
@@ -175,7 +175,7 @@ ArticleContent가 별도로 식별자를 가지고 있는 것이 아닌 단지 A
 
 추가적으로 밸류를 매핑 한 테이블을 지정하기 위해 @SecondaryTable과 @ArrtibuteOverride를 사용한다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-02-09 오후 1.22.33.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-09 오후 1.22.33.png" alt=""><figcaption></figcaption></figure>
 
 ```java
 @SecondayTable(name="article_content",
@@ -227,7 +227,7 @@ public class Article{
 
 아래 예시는 추상 클래스 Image를 두고 타입에 따라 다른 Image 객체를 상속받아 사용할 수 있게 한다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-02-09 오후 3.24.39.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-09 오후 3.24.39.png" alt=""><figcaption></figcaption></figure>
 
 ### Abstract Image
 

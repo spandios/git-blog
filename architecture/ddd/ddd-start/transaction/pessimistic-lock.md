@@ -14,7 +14,7 @@ Pessimistic 비관주의
 
 비관적 잠금은 여러 사용자들이 한 데이터에 대해 접근하고 수정할 것이라고 생각한다. 다시말해 트랜잭션 충돌이 분명히 발생할 거라는 비관적인 예측을 토대로 해결책을 제시하는 것이다.&#x20;
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-13 오후 12.05.12 (1).png" alt=""><figcaption><p>비관적 잠금</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-13 오후 12.05.12 (1).png" alt=""><figcaption><p>비관적 잠금</p></figcaption></figure>
 
 비관적 잠금은 먼저 애그리거트를 조회한 스레드가 사용이 끝날 때까지 다른 스레드의 접근을 막는 방법으로 동시성 문제를 해결하는 방법이다.&#x20;
 
@@ -34,7 +34,7 @@ Optional<Member> findByIdForUpdate(@Param("id") MemberId memberId);
 
 비관적 잠금으로 단점 중 하나는 데드락이 발생할 수 있는 것이다. 데드락이 발생하는 이유는 무엇일까?
 
-<img src="../../../.gitbook/assets/file.excalidraw.svg" alt="DeadLock" class="gitbook-drawing">
+<img src="../../../../.gitbook/assets/file.excalidraw.svg" alt="DeadLock" class="gitbook-drawing">
 
 위에 예시에선 스레드1이 주문 애그리거트 락을 보유하고 있고 스레드2가 멤버 애그리거트에 락을 보유하고 있는 것을 볼 수 있다.
 

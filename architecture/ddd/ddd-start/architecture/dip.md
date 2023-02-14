@@ -6,7 +6,7 @@
 
 ## 문제
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-07 오후 5.32.34.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-07 오후 5.32.34.png" alt=""><figcaption></figcaption></figure>
 
 하위 계층을 의존한다는 것은 위의 그림처럼 가격 할인 계산이라는 고수준인 도메인 계층에서의 도메인 서비스가 저수준인 인프라스트럭처 계층의 구현 기술에 의존한다는 것이다. 코드로 좀 더 이해해보자
 
@@ -63,7 +63,7 @@ public Money calculateDiscount(List<OrderLine> orderLines, String customerId){
 
 의존관계를 반대로 뒤집어 저수준이 고수준 모듈에 의존하도록 하는 것이다. 이를 위해서는 추상화가 필요하다.&#x20;
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-07 오후 5.53.02.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-07 오후 5.53.02.png" alt=""><figcaption></figcaption></figure>
 
 DIP를 적용하면 위의 예시처럼 의존관계가 역전되는 것을 볼 수 있다.&#x20;
 
@@ -136,7 +136,7 @@ CalculateDiscountService service = new CalculatediscountService(ruleDiscounter);
 
 ## DIP를 적용한 아키텍처 예시&#x20;
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-08 오후 12.23.35.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-08 오후 12.23.35.png" alt=""><figcaption></figcaption></figure>
 
 * Notifier (응용 <=> 인프라)
 
@@ -144,7 +144,7 @@ CalculateDiscountService service = new CalculatediscountService(ruleDiscounter);
 
 따라서 이메일 알림 서비스 대신 문자 서비스인 SMSNotifier 또는 이메일과 문자를 같이 사용하는CompositeNotifier로 대체해도 OrderService는 코드를 변경할 필요가 없다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-08 오후 12.27.18.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-08 오후 12.27.18.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -154,7 +154,7 @@ CalculateDiscountService service = new CalculatediscountService(ruleDiscounter);
 
 따라서 기존 Mybatis 대신 Jpa를 사용한 JpaOrderRepository로 대체해도 OrderService는 코드를 변경할 필요가 없다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-08 오후 2.25.50.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-08 오후 2.25.50.png" alt=""><figcaption></figcaption></figure>
 
 ## 주의사항&#x20;
 
@@ -162,11 +162,11 @@ CalculateDiscountService service = new CalculatediscountService(ruleDiscounter);
 
 아래는 잘못된 구조인데, 단지 인터페이스로 분리할 뿐 여전히 고수준인 도메인 서비스가 실제 구현체를 담당하는 인프라 계층의 인터페이스를 의존하고 있기 때문이다.&#x20;
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-08 오후 12.08.57.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-08 오후 12.08.57.png" alt=""><figcaption></figcaption></figure>
 
 때문에 아래 그림처럼 RuleDiscounter라는 인터페이스를 도메인 계층에 둬서 고수준 모듈을 바라보게 끔 해야한다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-08 오후 12.12.25.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-08 오후 12.12.25.png" alt=""><figcaption></figcaption></figure>
 
 
 

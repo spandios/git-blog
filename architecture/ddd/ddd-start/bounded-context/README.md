@@ -18,15 +18,15 @@
 
 컨텍스트를 나누고 그것을 담당하는 팀을 구성하는 구조를 가질 수 있다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.44.38.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.44.38.png" alt=""><figcaption></figcaption></figure>
 
 작은 규모의 프로젝트나 기업에선 한 바운디드 컨텍스트를 한 팀이 모두 맡아서 구현하는 구조를 가질 수 있다.
 
 여러 하위 도메인을 하나의 바운디드 컨텍스트에서 개발할 때는 논리적으로 컨텍스트를 나누도록 하자. 하위 도메인 모델들이 무분별하게 섞이지 않게 해야하기 때문이다. 아래 그림처럼 물리적으로 하나의 컨텍스트만 가지더라도 내부적으로는 논리적으로 컨텍스트를 분리하는 것이다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.26.54.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.26.54.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.28.39.png" alt=""><figcaption><p>어떤 문맥에 있냐에 따라 도메인은 각각 다른 모델이다.</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.28.39.png" alt=""><figcaption><p>어떤 문맥에 있냐에 따라 도메인은 각각 다른 모델이다.</p></figcaption></figure>
 
 
 
@@ -36,7 +36,7 @@
 
 도메인 모델의 데이터 구조가 바뀌면 DB 테이블 스키마도 변경 되기 때문에 테이블도 바운디드 컨텍스트에 포함된다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.32.35.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.32.35.png" alt=""><figcaption></figcaption></figure>
 
 바운디드 컨텍스트는 도메인에 알맞은 아키텍처를 선택하고 적용할 수 있다. 위의 구조를 항상 선택하는 것이 아니라 상황에 맞게 유연하게 아키텍처를 설계하고 적용하도록 하자.
 
@@ -46,7 +46,7 @@
 
 단순 CRUD가 필요한 데이터 중심으로 기능이 있기 때문에 따로 도메인 로직을 갖고 있지 않은 아키텍처를 사용하는 것도 좋다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.48.39.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.48.39.png" alt=""><figcaption></figcaption></figure>
 
 ### CQRS
 
@@ -58,7 +58,7 @@
 
 한 바운디드 컨텍스트에서 QCRS패턴 대로 명령과 조회를 나눈 구조로 구성할 수 있다. 아래 예시를 보면 왼쪽은 명령 기능만을 제공하기 위해 도메인, 인프라스트럭처 계층을 사용하고 있으며, 오른쪽은 조회 기능만을 제공하기 위해 DAO 계층을 중심으로 사용하고 있는 것을 볼 수 있다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.51.44.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.51.44.png" alt=""><figcaption></figcaption></figure>
 
 ### 서로 다른 구현기술로 구현
 

@@ -34,7 +34,7 @@ class Orderer{
 
 덕분에 큰 범위에서 도메인 모델을 이해할 수 있기 때문에, 전체적인 흐름을 파악하면서 도메인 모델을 관리할 수 있다.&#x20;
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-08 오후 3.14.09.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-08 오후 3.14.09.png" alt=""><figcaption></figcaption></figure>
 
 애그리거트에는 루트 엔티티가 존재하며, 루트 엔티티가 엔티티와 밸류 객체를 이용해 구현 기능을 제공한다.
 
@@ -48,7 +48,7 @@ class Orderer{
 
 리포지터리는 애거리거트 단위로 도메인 객체를 저장하고 조회하는 기능을 정의한다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-08 오후 3.23.24.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-08 오후 3.23.24.png" alt=""><figcaption></figcaption></figure>
 
 OrderRepository Interface는 도메인 객체를 영속화하는데 필요한 기능을 추상화한 것으로 고수준 모듈에 속한다.&#x20;
 

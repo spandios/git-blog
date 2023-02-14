@@ -5,7 +5,7 @@
 * 애그리거트에 속한 어느 한 객체는 다른 애그리거트에 속하지 않는다.
 * 보통 애그리거트가 한 개의 엔티티 객체만 갖는 경우가 많다고 한다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-08 오후 4.08.51.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-08 오후 4.08.51.png" alt=""><figcaption></figcaption></figure>
 
 
 

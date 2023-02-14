@@ -8,7 +8,7 @@
 
 직접 통합의 대표적인 방법은 HTTP REST API이다. 아래 예시는 어떤 바운디드 컨텍스트에서 추천 바운디드 컨텍스트에게 추천 상품을 REST API로 요청하는 작업을 보여준다.&#x20;
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-14 오후 5.08.14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오후 5.08.14.png" alt=""><figcaption></figcaption></figure>
 
 1. 자신의 도메인 관점에서 정의된 ProductRecommendationService인터페이스를 정의했다.
 2. 실제 구현 클래스인 RecSystemClient는 Infra계층 단에서 위의 인터페이스를 만족하도록 구현 한다.&#x20;
@@ -21,7 +21,7 @@
 
 메시지 큐 방식의 간접 통합 작업에서 중요한 점은 메시지 구조와 누가 그 큐를 제공할지 같은 팀 간의 협의이다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-14 오후 5.31.12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오후 5.31.12.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 마이크로서비스와 바운디드 컨텍스트
@@ -43,7 +43,7 @@
 
 가장 흔한 관계는 한쪽에서 API를 제공하고 다른 한쪽에서 그 API를 호출하는 관계이다.&#x20;
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-14 오후 5.58.07.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오후 5.58.07.png" alt=""><figcaption></figcaption></figure>
 
 기능을 제공하는 쪽을 상류 컴퍼넌트, 기능을 사용하는 쪽이 하류라고 볼 수 있다.
 
@@ -59,7 +59,7 @@
 
 
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-14 오후 6.10.12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오후 6.10.12.png" alt=""><figcaption></figcaption></figure>
 
 물론 공개 호스트 서비스도 상위 컴퍼넌트의 도메인을 사용하고 제공한다. 따라서 각 하류 컴퍼넌트들은 상류 서비스의 모델이 자신의 도메인 모델에 영향을 주지 않도록 모델을 변환하고 사용해야 한다. 앞서 살펴봤던 RecSystemClinet같은 완충재를 사용하는 것이다. 이런 완충재 역할의 계층을 안티코럽션 계층이라고 한다.
 
@@ -75,7 +75,7 @@
 
 개별 바운디드 컨텍스트에 매몰되면 전체를 보지 못할 때가 있다. 따라서 마치 애그리거트처럼 큰 그림으로 볼 수 있게 관계를 표시한 것을 컨텍스트 맵이라고 한다. 아래 그림대로 바운디드 컨텍스트 간의 관계를 표시한 것이다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-14 오후 6.34.42.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오후 6.34.42.png" alt=""><figcaption></figcaption></figure>
 
 각 바운디드 컨텍스트의 경계가 명확하고 서로 어떤 관계를 맺고 있는지 한눈에 확인할 수 있을 것이다.
 

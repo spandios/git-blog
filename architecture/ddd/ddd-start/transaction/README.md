@@ -6,7 +6,7 @@
 
 이번 글은 비관적 잠금과 낙관적 잠금에 대해 알아보면서 각 방식이 어떤 방법으로 동시성 문제를 해결하는지 알아보고 장단점이 무엇인지 알아본다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-13 오후 1.39.28.png" alt=""><figcaption><p>일관성과 동시성은 반비례 관계</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-13 오후 1.39.28.png" alt=""><figcaption><p>일관성과 동시성은 반비례 관계</p></figcaption></figure>
 
 #### 참고&#x20;
 

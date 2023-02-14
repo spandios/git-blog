@@ -16,7 +16,7 @@ Optimistic
 
 아래 그림을 예시로 낙관적 잠금이 어떻게 버전을 통해 동시성을 해결하는지 흐름을 살펴봄으로써 알아보자
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-13 오후 6.46.16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-13 오후 6.46.16.png" alt=""><figcaption></figcaption></figure>
 
 1. 스레드1과 스레드2를 보면 버전 5의 애그리거트를 가져오고 있다.
 2. 스레드1이 먼저 애그리거트를 수정하고 트랜잭션 커밋까지 성공해 version을 6으로 업데이트 했다.

@@ -93,7 +93,7 @@ public class TransferService{
 
 도메인 서비스는 도메인 로직을 표현하므로 도메인 영역에 위치한다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-02-10 오후 6.03.40.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-10 오후 6.03.40.png" alt=""><figcaption></figcaption></figure>
 
 ###
 
@@ -101,7 +101,7 @@ public class TransferService{
 
 도메인 서비스 로직이 고정되어 있지 않거나 로직이 외부 시스템을 의존한다면 인터페이스를 두고 실제 구현은 인프라 계층에서 하도록 하자.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-02-10 오후 6.39.41.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-10 오후 6.39.41.png" alt=""><figcaption></figcaption></figure>
 
 ## &#x20;
 

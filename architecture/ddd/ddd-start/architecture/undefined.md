@@ -9,7 +9,7 @@
 * 가장 앞 단에서 클라이언트에게 요청을 받아 응용 영역에 전달
 * 응용에서의 처리 결과를 다시 클라이언트에게 전달
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-07 오전 10.36.42.png" alt=""><figcaption><p>HTTP</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-07 오전 10.36.42.png" alt=""><figcaption><p>HTTP</p></figcaption></figure>
 
 ### 응용
 
@@ -39,13 +39,13 @@ public class OrderService {
 * 논리적인 개념을 표현하는 것보다는 실제 구현을 다룬다.
 * 도메인, 응용, 표현 영역은 구현 기술을 사용한 코드를 직접 만들지 않으며 인프라스트럭처 영역에 요청하고 사용하면서 기능 개발을 한다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-07 오전 11.07.24.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-07 오전 11.07.24.png" alt=""><figcaption></figcaption></figure>
 
 
 
 ## 계층 구조 아키텍처&#x20;
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-07 오전 11.15.59.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-07 오전 11.15.59.png" alt=""><figcaption></figcaption></figure>
 
 * 위의 네 영역을 구성할 때 많이 사용 되는 구조
 * 상위 계층은 하위 계층을 의존한다.
