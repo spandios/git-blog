@@ -17,13 +17,9 @@ fun max(a:Int, b:Int) = if ( a > b )a else b
 * 변경 가능 변수 vs 변경 불가능 변수
   * val ⇒ 변경 불가능 (value)
   * var ⇒ 변경 가능 (variable)
-  * 변경 불가능한 참조 + 변경 불가능한 객체를 side effect없는 함수와 조합하면 ⇒ 함수형 코드
+  * 변경 불가능한 참조 + 변경 불가능한 객체를 sideeffect없는 함수와 조합하면 ⇒ 함수형 코드
 
-```kotlin
-val a = 32
-var b : String
-
-```
+##
 
 ## 문자열 템플릿
 
@@ -78,6 +74,8 @@ class Rectangle(val height:Int, val widht:Int){
 
 * 코틀린은 패키지 구조와 디렉터리 구조가 맞아 떨어질 필요가 없다. 그러나 자바의 패키지 방식을 따르는게 좋다.
 * start import시 하위 전체 클래스 뿐아니라 최상위까지도 가져온다.
+
+##
 
 ## Enum
 
