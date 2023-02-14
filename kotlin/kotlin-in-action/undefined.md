@@ -79,8 +79,7 @@ class Rectangle(val height:Int, val widht:Int){
 
 ## Enum
 
-* enum은 enum뒤에 class를 붙이자
-* enum은 class 앞에 존재해야지만 키워드다.
+* enum은 enum뒤에 class를 붙이자. enum은 class 앞에 존재해야지만 키워드로 적용된다.
 
 ```kotlin
 enum class Color(val r:Int, val g:Int, val b: Int){
