@@ -1,0 +1,263 @@
+# 함수 정의와 호출
+
+
+
+아래 함수를 더 호출하기 쉽게 해보자
+
+```kotlin
+fun<T> joinToString(collection:Collection<T>, separator:String, 
+prefix:String, postfix:String) : String {
+	val result = StringBuilder(preFix)
+	for ((index, element) in collection.withIndex()){
+		if(index > 0) result.append(separator)
+		result.append(element)
+	}	
+	result.append(postfix)
+	return result.toString()
+}
+```
+
+## 이름 붙인 인자
+
+```kotlin
+// 이름을 통해 인자를 명시할 수 있음
+joinToString(collection, separator = ",", prefix= "", postfix=" ")
+```
+
+## 디폴트 파라미터
+
+```kotlin
+fun<T> joinToString(collection:Collection<T>, separator:String =", ", 
+prefix:String ="", postfix:String = "") : String {}
+```
+
+## 정적인 유틸리티 클래스 없애기
+
+자바에서는 Util같이 정적 메서드를 모아놓은 유틸리티 클래스는 모든 코드를 클래스의 메서드로 작성해야하기 때문에 필요하다. 하지만 코틀린은 클래스 없이도 최상위 함수와 프로퍼티를 생성할 수 있다.
+
+* 최상위 함수
+
+```kotlin
+// join.kt
+package strings
+fun<T> joinToString(...) : String {...}
+
+// use : strings.joinToString()
+```
+
+* 최상위 프로퍼티
+
+```kotlin
+// join.kt
+package strings
+
+// const를 통해 public static final 필드로 만들 수 있다. (단, 원시타입과 String만)
+const val TOP_VALUE = 0
+
+fun printValue(){
+	println("TOP VALUE $TOP_VALUE")
+}
+```
+
+## 확장 함수
+
+{% hint style="info" %}
+어떤 클래스의 멤버 메서드인 것처럼 호출할수 있지만 실제로는 클래스 밖에 선언된 함수
+{% endhint %}
+
+* 기존 코드에 영향을 주지 않고 포함시키지 않은 채 기능을 확장할 수 있다.
+* 직접 작성한 코드가 아니여도 확장할 수 있다.
+* 캡슐화를 깨지 않기 위해 private이나 protected 멤버는 사용할 수 없다.
+* 정적 메서드 호출에 대한 문법적인 편의이다.
+* 오버라이드 할 수는 없다. 수신 객체로 지정된 타입에 대해서만 정적으로 확장 함수를 호출할지 결정하기 때문이다.
+
+### 만드는 법
+
+```kotlin
+// 함수이름앞에 확장할 클래스만 추가해주면 된다. 여기서 String은 수신 객체 타입이다.
+fun String.lastChar(): Char = this[this.length - 1]
+
+or 
+// this를 생략할 수 있다.
+fun String.lastChar(): Char = get(length - 1)
+```
+
+### 사용
+
+```kotlin
+// "kotlin"을 수신객체라고 한다.
+"kotlin".lastChar() 
+```
+
+### 임포트
+
+임포트 없이는 사용 못 함. as를 통해 alias 가능
+
+```kotlin
+import strings.lastChar as last
+val c = "kotlin".last()
+```
+
+###
+
+## 확장 함수로 유틸리티 함수 정의하기
+
+joinToString을 확장 함수로 정의해보자
+
+```kotlin
+fun <T> Collection<T>.joinToString(separator: String = ",", prefix:String = "", 
+postfix:String =""
+):String {
+	val result = StringBuilder(preFix)
+// this는 T 타입으로 원소로 이루어진 Collection이다
+	for ((index, element) in this.withIndex()){ 
+		if(index > 0) result.append(separator)
+		result.append(element)
+	}	
+	result.append(postfix)
+	return result.toString()
+	
+}
+```
+
+## 확장 프로퍼티
+
+* 프로퍼티 형식으로 사용할 수 있는 API를 추가가능
+* 실제 상태를 저장할 수는 없다.
+
+```kotlin
+
+val String.lastChar: Char
+    get() = get(length - 1)
+
+// use
+"kotlin".*lastChar*
+```
+
+## 가변 길이 인자
+
+인자의 개수가 달라질 수 있는 함수를 정의할 수 있다
+
+```kotlin
+// 파라미터 앞에 vararg를 붙이자.
+fun listOf<T>(vararg values:T): List<T> {...}
+```
+
+* 스프레드 연산자
+
+배열을 명시적으로 풀어 각 원소가 인자로 전달되게 할 수 있다.
+
+```kotlin
+val args = arrayOf("t","e","s","t")
+var test = listOf(*args)
+```
+
+## 중위 호출
+
+```kotlin
+val map = mapOf(1 to "one") // 중위호출
+val map = mapOf(1.to("one") // 일반 메서드 호출
+```
+
+* 위의 예시는 중위 호출이라는 특별한 방식으로 to라는 일반 메서드를 호출한 것이다.
+* 인자가 하나뿐인 일반 메서드나 확장 함수에 중위 호출을 사용할 수 있다.
+* 생성법
+
+```kotlin
+// infix변경자를 함수 선언 앞에 추가한다.
+infix fun Any.to(other:Any) = Pair(this, other) 
+```
+
+## 구조 분해 선언
+
+```kotlin
+// 각 변수를 분해해서 선언 가능하다.
+val (number, name) = 1 to “one” 
+```
+
+## String 확장 함수가 정규식 대신 파싱하는 법
+
+```kotlin
+path = "/Users/yole/kotlin-book/chapter.adoc"
+
+fun parsePath(path:String){
+	val directory = path.substringBeforeLast("/") => /Users/yole/kotlin-book
+	val fullName = path.subStringAfterLast("/") => chapter.adoc
+	val fileName = fullName.substringAfterLast(".") => chapter
+	val extension = fullName.substringAfterLast(".") => adoc
+}
+```
+
+## “”” 3중 따옴표 문자열
+
+* 이 3중 따옴표안에서는 어떤 문자도 이스케이프할 필요가 없다.
+
+```kotlin
+val regex = """(.+)/(.+)\\.(.+)""".toRegex()
+```
+
+* 여러 줄 문자열을 3중 따옴표 문자열을 사용하면 들여쓰기나 줄 바꿈을 포함한 모든 문자가 다 들어간다.
+
+## 로컬 함수
+
+* 보통 중복되는 코드를 제거하기 위해 우리는 메서드 추출 리팩토링을 적용해 긴 메서드를 잘게 나누어 각 부분을 재활용한다.
+* 하지만 클래스 안에 작은 메서드들이 너무 많아져 오히려 코드를 이해하기 힘들 수 있다.
+* 함수 안에 로컬 함수를 작성해 중복되는 코드를 제거할 수 있다.
+
+#### 수정 전 코드
+
+```kotlin
+class User(val id:Int, val name:String, val address:String)
+
+fun saveUser(user:User){
+    if(user.name.isEmpty()){ // 검증이 중복되고 있다.
+        throw IllegalArgumentException("Can't save user ${user.id}: empty Name")
+    }
+    if(user.address.isEmpty()){ // 검증이 중복되고 있다.
+        throw IllegalArgumentException("Can't save user ${user.id}: empty Address")
+    }
+}
+
+```
+
+#### 로컬 함수 사용하기
+
+외부 함수의 모든 파라미터와 변수 또한 사용할 수 있다. 자바스크립트의 클로저가 생각난다.
+
+```kotlin
+class User(val id:Int, val name:String, val address:String)
+
+fun saveUser(user:User){
+		fun validate(value:String, filedName:String){
+			if(value.isEmpty()){
+			// 외부 함수의 모든 파라미터와 변수 또한 사용할 수 있다. 여기선 user
+        throw IllegalArgumentException("Can't save user ${user.id}: empty $filedName")
+			}
+		}
+		validate(user.name, "Name")
+		validate(user.address, "Address")
+}
+
+```
+
+#### 확장함수를 통해 더 개선해보기
+
+여기서 확장함수는 자신의 코드를 확장하는 것이지만 validate함수는 이 곳에서만 쓰이기 때문에 굳이 User 클래스에 넣고 싶지는 않을 수 있어 유용하다.
+
+```kotlin
+fun User.validateBeforeSave(){
+ fun validate(value:String, filedName:String){
+   if(value.isEmpty()){
+// 외부 함수의 모든 파라미터와 변수 또한 사용할 수 있다. 여기선 user
+throw IllegalArgumentException("Can't save user ${user.id}: empty $filedName")
+    }
+}
+
+validate(user.name, "Name")
+validate(user.address, "Address")
+}
+
+fun saveUser(user: User){
+	user.validateBeforeSave()
+}
+```

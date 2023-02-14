@@ -25,18 +25,20 @@
 
 ## JVM Language
 
-* [JVM](jvm-language/jvm/README.md)
-  * [GabageCollection](jvm-language/jvm/gabagecollection.md)
-* [Effective Java](jvm-language/effective-java/README.md)
-  * [객체 생성과 파괴](jvm-language/effective-java/undefined.md)
-  * [모든 객체의 공통 메서드](jvm-language/effective-java/undefined-1.md)
-  * [클래스와 인터페이스](jvm-language/effective-java/undefined-2.md)
-  * [제네릭](jvm-language/effective-java/undefined-3.md)
+* [JVM](java/jvm.md)
+  * [GabageCollection](java/gabagecollection.md)
+* [Effective Java](java/effective-java/README.md)
+  * [객체 생성과 파괴](java/effective-java/undefined.md)
+  * [모든 객체의 공통 메서드](java/effective-java/undefined-1.md)
+  * [클래스와 인터페이스](java/effective-java/undefined-2.md)
+  * [제네릭](java/effective-java/undefined-3.md)
 
 ***
 
 * [Kotlin](kotlin/README.md)
-  * [Kotlin in Action](kotlin/kotlin-in-action.md)
+  * [Kotlin in Action](kotlin/kotlin-in-action/README.md)
+    * [코틀린 기초](kotlin/kotlin-in-action/undefined.md)
+    * [함수 정의와 호출](kotlin/kotlin-in-action/undefined-1.md)
 * [Devops](devops.md)
 * [Conventional Commit](conventional-commit/README.md)
   * [Commit Hooks](conventional-commit/commit-hooks.md)
