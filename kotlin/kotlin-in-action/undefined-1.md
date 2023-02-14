@@ -35,7 +35,7 @@ prefix:String ="", postfix:String = "") : String {}
 
 자바에서는 Util같이 정적 메서드를 모아놓은 유틸리티 클래스는 모든 코드를 클래스의 메서드로 작성해야하기 때문에 필요하다. 하지만 코틀린은 클래스 없이도 최상위 함수와 프로퍼티를 생성할 수 있다.
 
-### 최상위 함수
+* 최상위 함수
 
 ```kotlin
 // join.kt
@@ -45,7 +45,7 @@ fun<T> joinToString(...) : String {...}
 // use : strings.joinToString()
 ```
 
-### 최상위 프로퍼티
+* 최상위 프로퍼티
 
 ```kotlin
 // join.kt
@@ -71,7 +71,7 @@ fun printValue(){
 * 정적 메서드 호출에 대한 문법적인 편의이다.
 * 오버라이드 할 수는 없다. 수신 객체로 지정된 타입에 대해서만 정적으로 확장 함수를 호출할지 결정하기 때문이다.
 
-### 만들고 사용 해보기&#x20;
+### 만드는 법
 
 ```kotlin
 // 함수이름앞에 확장할 클래스만 추가해주면 된다. 여기서 String은 수신 객체 타입이다.
@@ -80,10 +80,13 @@ fun String.lastChar(): Char = this[this.length - 1]
 or 
 // this를 생략할 수 있다.
 fun String.lastChar(): Char = get(length - 1)
+```
 
-// 사용 , 여기서 "kotlin"을 수신객체라고 한다.
+### 사용
+
+```kotlin
+// "kotlin"을 수신객체라고 한다.
 "kotlin".lastChar() 
-
 ```
 
 ### 임포트
