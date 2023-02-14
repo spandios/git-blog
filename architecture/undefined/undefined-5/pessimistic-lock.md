@@ -10,6 +10,8 @@ Pessimistic 비관주의
 
 
 
+## Pessimistic Lock
+
 비관적 잠금은 여러 사용자들이 한 데이터에 대해 접근하고 수정할 것이라고 생각한다. 다시말해 트랜잭션 충돌이 분명히 발생할 거라는 비관적인 예측을 토대로 해결책을 제시하는 것이다.&#x20;
 
 <figure><img src="../../../.gitbook/assets/스크린샷 2023-02-13 오후 12.05.12 (1).png" alt=""><figcaption><p>비관적 잠금</p></figcaption></figure>

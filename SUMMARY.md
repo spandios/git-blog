@@ -79,7 +79,7 @@
   * [OOP](cs/oop.md)
   * [Design Pattern](cs/design-pattern/README.md)
     * [객체 생성 관련](cs/design-pattern/undefined/README.md)
-      * [Page 1](cs/design-pattern/undefined/page-1.md)
+      * [Singleton Pattern](cs/design-pattern/undefined/singleton-pattern.md)
       * [Page 3](cs/design-pattern/undefined/page-3.md)
       * [Page 4](cs/design-pattern/undefined/page-4.md)
       * [Page 5](cs/design-pattern/undefined/page-5.md)

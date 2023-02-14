@@ -79,11 +79,11 @@ Optional<Member> findByIdForUpdate(@Param("id") MemberId memberId);
 
 ## 장단점
 
-#### 장점 <a href="#1" id="1"></a>
+### 장점 <a href="#1" id="1"></a>
 
 * 충돌이 많이 발생 안한다면, 여러 트랜잭션을 처리할 수 있어 성능이 좋다.
 
-#### 단점 <a href="#1" id="1"></a>
+### 단점 <a href="#1" id="1"></a>
 
 * 잦은 충돌이 일어나는경우 **롤백 처리**에 대한 비용이 많이 들어 오히려 성능이 안 좋아질 수 있다.
 
