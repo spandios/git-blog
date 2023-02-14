@@ -101,7 +101,7 @@ public class Roman{
 
 
 
-#### 8. 객체 소멸자인 finalizer와 cleaner 사용을 피하자
+### 8. 객체 소멸자인 finalizer와 cleaner 사용을 피하자
 
 실행이 예측할 수 없고 오직 가비지 컬렉션에 달려있는 객체 소멸자 사용을 지양하자.
 
@@ -111,7 +111,7 @@ public class Roman{
 
 
 
-#### 9. 자원을 꼭 회수해야하는 경우 Try with Resources를 사용하자
+### 9. 자원을 꼭 회수해야하는 경우 Try with Resources를 사용하자
 
 * try finally
   * 자원이 2개이상일 때 복잡해짐

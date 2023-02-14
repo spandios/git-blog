@@ -28,8 +28,10 @@
 * [JVM](java/jvm.md)
 * [GabageCollection](java/gabagecollection.md)
 * [Effective Java](java/effective-java/README.md)
-  * [effective java](java/effective-java/effective-java.md)
   * [객체 생성과 파괴](java/effective-java/undefined.md)
+  * [모든 객체의 공통 메서드](java/effective-java/undefined-1.md)
+  * [클래스와 인터페이스](java/effective-java/undefined-2.md)
+  * [제네릭](java/effective-java/undefined-3.md)
 
 ***
 
