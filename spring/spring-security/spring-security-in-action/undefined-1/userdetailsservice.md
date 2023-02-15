@@ -17,7 +17,7 @@ public interface UserDetailsService {
 }
 ```
 
-<img src="../../../../.gitbook/assets/file.excalidraw (2) (1).svg" alt="UserDetails" class="gitbook-drawing">
+<img src="../../../../.gitbook/assets/file.excalidraw (2).svg" alt="UserDetails" class="gitbook-drawing">
 
 AuthenticationProvider는 자신의 책임이 유저의 자세한 정보를 찾는게 아니기 때문에 UserDetailsService에게 유저 조회를 요청한다. &#x20;
 
