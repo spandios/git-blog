@@ -19,12 +19,15 @@ prefix:String, postfix:String) : String {
 
 ## 이름 붙인 인자
 
+이름을 통해 특정 인자를 명시할 수 있다.
+
 ```kotlin
-// 이름을 통해 인자를 명시할 수 있음
 joinToString(collection, separator = ",", prefix= "", postfix=" ")
 ```
 
 ## 디폴트 파라미터
+
+파라미터에 기본값을 명시할 수 있다.
 
 ```kotlin
 fun<T> joinToString(collection:Collection<T>, separator:String =", ", 
