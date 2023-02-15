@@ -73,6 +73,7 @@
       * [Offline Pessimistic Lock(Offline 비관적 잠금)](architecture/ddd/ddd-start/transaction/offline-pessimistic-lock-offline.md)
     * [바운디드 컨텍스트](architecture/ddd/ddd-start/bounded-context/README.md)
       * [바운디드 컨텍스트 간 관계](architecture/ddd/ddd-start/bounded-context/undefined.md)
+    * [이벤트](architecture/ddd/ddd-start/undefined.md)
 
 ***
 
