@@ -74,6 +74,7 @@
     * [바운디드 컨텍스트](architecture/ddd/ddd-start/bounded-context/README.md)
       * [바운디드 컨텍스트 간 관계](architecture/ddd/ddd-start/bounded-context/undefined.md)
     * [이벤트](architecture/ddd/ddd-start/event.md)
+    * [CQRS](architecture/ddd/ddd-start/cqrs.md)
 
 ***
 
