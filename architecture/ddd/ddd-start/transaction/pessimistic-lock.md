@@ -34,7 +34,7 @@ Optional<Member> findByIdForUpdate(@Param("id") MemberId memberId);
 
 비관적 잠금으로 단점 중 하나는 데드락이 발생할 수 있는 것이다. 데드락이 발생하는 이유는 무엇일까?
 
-<img src="../../../../.gitbook/assets/file.excalidraw (5).svg" alt="DeadLock" class="gitbook-drawing">
+<img src="../../../../.gitbook/assets/file.excalidraw (4).svg" alt="DeadLock" class="gitbook-drawing">
 
 위에 예시에선 스레드1이 주문 애그리거트 락을 보유하고 있고 스레드2가 멤버 애그리거트에 락을 보유하고 있는 것을 볼 수 있다.
 
