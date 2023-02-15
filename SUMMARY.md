@@ -37,7 +37,8 @@
 
 * [Kotlin](kotlin/README.md)
   * [Kotlin in Action](kotlin/kotlin-in-action/README.md)
-    * [코틀린 기초](kotlin/kotlin-in-action/undefined.md)
+    * [코틀린이란?](kotlin/kotlin-in-action/undefined.md)
+    * [코틀린 기초](<kotlin/kotlin-in-action/undefined (1).md>)
     * [함수 정의와 호출](kotlin/kotlin-in-action/undefined-1.md)
     * [클래스, 객체, 인터페이스](kotlin/kotlin-in-action/undefined-2.md)
       * [클래스와 인터페이스](kotlin/kotlin-in-action/3/1.md)
