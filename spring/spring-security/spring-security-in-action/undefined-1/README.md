@@ -12,7 +12,7 @@ UserDetailsService는 사용자 조회만을 UserDetailsManager는 사용자 추
 
 UserDetails는 권한에 대한 정보를 가지고 있으며 GrantedAuthority 인터페이스로 나타낼수 있다.
 
-<img src="../../../../.gitbook/assets/file.excalidraw (1) (1).svg" alt="사용자 관리를 수행하는 구성 요소간 종속성" class="gitbook-drawing">
+<img src="../../../../.gitbook/assets/file.excalidraw (1) (1) (1).svg" alt="사용자 관리를 수행하는 구성 요소간 종속성" class="gitbook-drawing">
 
 
 

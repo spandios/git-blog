@@ -176,7 +176,7 @@ public class Order{
 
 
 
-<img src="../../../.gitbook/assets/file.excalidraw (1) (2).svg" alt="" class="gitbook-drawing">
+<img src="../../../.gitbook/assets/file.excalidraw (1) (1).svg" alt="" class="gitbook-drawing">
 
 ## 동기 이벤트 처리 문제
 
