@@ -12,7 +12,7 @@ SHOW VARIABLES or SHOW GLOBAL VARIABLES
 
 {% embed url="https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html" %}
 
-<img src="../../../.gitbook/assets/스크린샷 2023-02-01 오후 11.22.08.png" alt="" data-size="original">
+<img src="../../../../.gitbook/assets/스크린샷 2023-02-01 오후 11.22.08.png" alt="" data-size="original">
 {% endhint %}
 
 

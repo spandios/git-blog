@@ -30,6 +30,6 @@ Mysql@5 버전 대에서 기능과 성능이 PostgresSQL보다 비교적 좋지 
 
 
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-02-02 오전 12.30.47.png" alt=""><figcaption><p><a href="https://db-engines.com/en/ranking_trend/relational+dbms">https://db-engines.com/en/ranking_trend/relational+dbms</a></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-02 오전 12.30.47.png" alt=""><figcaption><p><a href="https://db-engines.com/en/ranking_trend/relational+dbms">https://db-engines.com/en/ranking_trend/relational+dbms</a></p></figcaption></figure>
 
 ![](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1169fe06-a95b-413d-82bf-b54138abba95/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA\_2023-01-26\_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB\_12.55.20.png)

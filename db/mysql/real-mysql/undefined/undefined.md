@@ -44,7 +44,7 @@ mysqld\_safe는 일종의 mysqld를 감시하는 데몬이라고 볼 수 있는�
 
 
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-02-01 오후 10.47.49.png" alt=""><figcaption><p>docker환경에의 기본 my.cnf</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-01 오후 10.47.49.png" alt=""><figcaption><p>docker환경에의 기본 my.cnf</p></figcaption></figure>
 
 ****
 

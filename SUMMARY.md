@@ -46,15 +46,9 @@
       * [클래스 위임](jvm-language/kotlin/kotlin-in-action/class/undefined-1.md)
       * [object 키워드](jvm-language/kotlin/kotlin-in-action/class/object.md)
 
-***
-
-* [Devops](devops.md)
-* [Conventional Commit](conventional-commit/README.md)
-  * [Commit Hooks](conventional-commit/commit-hooks.md)
-  * [Senmantic Release](conventional-commit/senmantic-release.md)
-
 ## Architecture
 
+* [MSA](architecture/msa.md)
 * [DDD](architecture/ddd/README.md)
   * [도메인 주도 개발 시작하기](architecture/ddd/ddd-start/README.md)
     * [도메인 모델](architecture/ddd/ddd-start/domain.md)
@@ -81,15 +75,19 @@
 
 ***
 
-* [DB](db.md)
-* [Mysql](mysql/README.md)
-  * [Real Mysql](mysql/real-mysql/README.md)
-    * [설정](mysql/real-mysql/undefined/README.md)
-      * [설정 파일](mysql/real-mysql/undefined/undefined.md)
-      * [시스템 변수](mysql/real-mysql/undefined/undefined-1.md)
-    * [사용자 및 권한](mysql/real-mysql/undefined-1/README.md)
-      * [권한](mysql/real-mysql/undefined-1/undefined.md)
-      * [역할](mysql/real-mysql/undefined-1/undefined-1.md)
+* [DB](db/README.md)
+  * [Mysql](db/mysql/README.md)
+    * [Real Mysql](db/mysql/real-mysql/README.md)
+      * [설정](db/mysql/real-mysql/undefined/README.md)
+        * [설정 파일](db/mysql/real-mysql/undefined/undefined.md)
+        * [시스템 변수](db/mysql/real-mysql/undefined/undefined-1.md)
+      * [사용자 및 권한](db/mysql/real-mysql/undefined-1/README.md)
+        * [권한](db/mysql/real-mysql/undefined-1/undefined.md)
+        * [역할](db/mysql/real-mysql/undefined-1/undefined-1.md)
+* [Devops](devops/README.md)
+  * [Conventional Commit](devops/conventional-commit/README.md)
+    * [Commit Hooks](devops/conventional-commit/commit-hooks.md)
+    * [Senmantic Release](devops/conventional-commit/senmantic-release.md)
 * [CS](cs/README.md)
   * [OOP](cs/oop.md)
   * [Design Pattern](cs/design-pattern/README.md)
