@@ -88,7 +88,7 @@ commit에 대한 메타데이터를 작성한다. 아래와 같은 메타데이�
 
 
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-02-01 오전 11.35.03 (1).png" alt=""><figcaption><p>메지지 빌더</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/스크린샷 2023-02-01 오전 11.35.03 (1).png" alt=""><figcaption><p>메지지 빌더</p></figcaption></figure>
 
 다음 글은 컨벤션을 지속적으로 유지할 수 있게 도와주는 기술에 대해 알아보려 한다.
 

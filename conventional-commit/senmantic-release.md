@@ -164,15 +164,15 @@ ci가 정상적으로 돌아가면서 semantic-release가 동작되면서 1.0.0�
 
 또 각 버전 업데이트에 뒤를 이어 changelog와 tag를 푸시하는 것도 볼 수 있다. changelog와 tag push작업은 chore타입으로 ci/cd 파이프라인을 스킵한다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-01-31 오후 5.52.33.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/스크린샷 2023-01-31 오후 5.52.33.png" alt=""><figcaption></figcaption></figure>
 
 태그가 잘 업데이트 되었다.&#x20;
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-01-31 오후 5.54.14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/스크린샷 2023-01-31 오후 5.54.14.png" alt=""><figcaption></figcaption></figure>
 
 CHANGELOG.md 파일도 자동으로 작성해준다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-01-31 오후 5.53.59.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/스크린샷 2023-01-31 오후 5.53.59.png" alt=""><figcaption></figcaption></figure>
 
 
 
