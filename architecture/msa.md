@@ -12,7 +12,7 @@ description: MSA에 대해 알아보자
 
 하나의 시스템이 서비스 전체 기능을 처리하도록 설계하는 것으로 과거부터 지금까지 많이 사용되는 아키텍처이다. 모놀로틱은 한 애플리케이션에서 다양한 비지니스 로직을 처리하며, 하나의 데이터 저장소를 사용한다.&#x20;
 
-<img src="../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+<img src="../.gitbook/assets/file.excalidraw (2).svg" alt="" class="gitbook-drawing">
 
 
 
@@ -50,6 +50,12 @@ description: MSA에 대해 알아보자
 MSA는 모놀로식과는 다르게 서비스를 각각 분리해 그것을 담당하는 애플리케이션을 두며, 서비스마다 독립적인 DB를 사용한다. 서비스들은 미리 정의된 인터페이스를 통해 서로 유기적으로 동작하며 전체 기능을 수행한다.
 
 정해진 API를 통해 서비스 간의 통신해 서비스 간 느슨한 결합을 가질 수 있다. API 성능이 전반적인 애플리케이션 성능에 영향을 미치므로 가벼운 프로토콜을 사용해야 한다.
+
+MSA는 특정 서비스를 구축하는 데 사용하는 언어나 저장소를 자율적으로 선택할 수 있다. 이를 Polyglot이라고 표현한다.&#x20;
+
+
+
+<img src="../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
 
 ### SOA
 
