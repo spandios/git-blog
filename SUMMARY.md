@@ -32,7 +32,7 @@
   * [모든 객체의 공통 메서드](java/effective-java/undefined-1.md)
   * [클래스와 인터페이스](java/effective-java/undefined-2.md)
   * [제네릭](java/effective-java/undefined-3.md)
-  * [열거 타입과 애너테이션](jvm-language/effective-java/undefined-4.md)
+  * [열거 타입과 애너테이션](jvm-language/effective-java/enum-annotation.md)
 * [Kotlin](jvm-language/kotlin/README.md)
   * [Kotlin in Action](jvm-language/kotlin/kotlin-in-action/README.md)
     * [코틀린이란?](jvm-language/kotlin/kotlin-in-action/undefined.md)

@@ -321,6 +321,276 @@ PayrollDay.FRIDAY.pay(1, 1);
 
 
 
+## 35. ordinal 메서드 대신 필드를 사용하자&#x20;
+
+enum은 해당 상수가 몇 번째 위치인지를 반환하는 ordinal를 제공하지만, 이 메서드는 유지보수가 힘든 메서드이다.&#x20;
+
+1. 이미 사용 중인 정수와 값이 같은 상수는 추가할 수 없다.
+2. 중간에 값을 비워둘 수 없다.
+3. 타입 안전하지 않다.
+
+orinal은 사용하지 말고 필드에 저장하도록 하자&#x20;
+
+```java
+public enum Ensemble{
+    SOLO(1);
+    private final int numberOfMusicians;
+}
+```
+
+
+
+## 36. 비트 필드 대신 EnumSet을 사용하라&#x20;
+
+EnumSet 클래스가 비트 필드 수준의 명료함과 성능을 제공하고 열거 타입의 장점을 선사한다.
+
+Enumset의 내부는 비트 벡터로 구현되어 있다. 대부분의 경우에 EnumSet 전체를 long 변수 하나로 표현하여 비트 필드에 비견되는 성능을 보여준다. 또 다른 난해한 작업은 EnumSet이 처리해준다.&#x20;
+
+```java
+public class Text{
+    public enum Style {BOLD, ITALIC, UNDERLINE}
+        
+    public void applyStyles(Set<Style styles){} // EnumSet을 넘기는게 가장 좋음
+
+}
+text.applyStyles(EnumSet.of(Style.BOLD, STYLE.ITALIC));
+```
+
+
+
+## 37. ordinal 인데싱 대신 EnumMap을 사용하라&#x20;
+
+배열이나 리스트에서 원소를 꺼낼 때 ordinal를 통해 인덱싱하지 말자. 35에서 봤듯이 유지보수에도 좋지 않고 타입 안전하지 않다. 이럴 땐 EnumMap을 사용하자. EnumMap은 enum타입을 키로 갖는 Map이다. 성능도 우수하고 리스트의 인덱싱 과정에서 오류가 날 가능성도 원천봉쇄된다.&#x20;
+
+```java
+Map<EnumClass, Set<Clazz>> enumMap = new EnumMap<>(EnumClass.class);
+enumMap.put(EnumClass.Example, clazz1);
+enumMap.put(EnumClass.Example, clazz2);
+
+```
+
+
+
+## 38. 확장할 수 있는 열거 타입이 필요하면 인터페이스를 사용하라
+
+enum을 확장해서 사용하는 건 대부분 좋지 않다. 확장한 타입의 원소는 기반 타입의 원소로 취급되지만, 그 반대는 성립하지 않는다. 기반 타입과 확장 타입 요소를 선회하는 방법도 마땅치가 않으며, 확장성을 높이려면 설계와 구현이 복잡해 진다. \
+그럼에도 필요하다면 interface를 이용하자.&#x20;
+
+```java
+public interface Operation {
+    double apply(double x, double y);
+}
+
+public enum BasicOperation implements Operation{
+    PLUS("+"){
+        double apply(double x, double y){
+            return x + y 
+        }
+    }
+}
+
+public enum ExtendedOperation implements Operation{
+    EXP("^"){
+        double apply(double x, double y){
+            return Math.pow(x,y); 
+        }
+    }
+    
+}
+```
+
+
+
+
+
+## 39. 명명 패턴보다 애너테이션을 사용하라&#x20;
+
+### 명명 패턴&#x20;
+
+명명 패턴은 변수나 함수의 이름을 정해진 규칙대로 작성하는 패턴을 뜻한다. 전통적으로 도구나 프레임워크가 특별히 다뤄야하는 곳에는 명명 패턴을 사용했다. 예를들어, JUnit은 버전 3까지 테스트 메서드 일므을 test로 시작하게끔 했다고 한다.&#x20;
+
+
+
+### 명명 패턴의 단점&#x20;
+
+1. 오타가 나면 안된다.
+2. 이름만 체크하기 때문에 올바른 프로그램 요소인지는 알 수 없다.
+3. 프로그램 요소를 매개변수로 전달한 방법이 마땅히 없다.&#x20;
+
+
+
+### 애너테이션&#x20;
+
+애너테이션은 위의 문제를 해결해준다. @Test 애너테이션을 직접 작성하면서 이해해보자.
+
+```java
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface Test {
+}
+
+public class Sample {
+    @Test public static void m1(){
+        
+    }
+    
+    public static void m2(){
+        
+    }
+}
+
+
+```
+
+* 메타 애너테이션: 애너테이션에 설정하는 애너테이션
+* @Retention: 애너테이션이 유지되는 범위를 설정한다.
+* @Target: 애너테이션이 적용될 대상을 설정한다.
+* 마커 애너테이션: 매개변수 없이 단순히 대상에 마킹하는 애너테이션
+
+
+
+**애너테이션은 그 대상에 직접적인 영향을 주지는 않는다. 다만, 이 애너테이션에 관심 있는 기능에게 정보를 줘 추가적인 처리를 하도록 도와준다.** &#x20;
+
+다음의 RunTest가 그런 도구의 예이다. RunTest는 Sample Class의 메서드 중 `isAnnotationPresent`메서드를 통해 Test 애너테이션이 있는 대상에만 관심을 가지고 있다.&#x20;
+
+```java
+public class RunTests {
+    public static void main(String[] args) throws Exception{
+        int tests = 0;
+        int passed = 0;
+        Class testClass = Class.forName("Sample");
+        for (Method m : testClass.getDeclaredMethods()) {
+            if (m.isAnnotationPresent(Test.class)) { // Test 애너테이션이 있ㄴ느지 
+                tests++;
+                try {
+                    m.invoke(null); 
+                    passed++;
+                } catch (InvocationTargetException wrappedExc) {
+                    // 메서드이 예외를 던지면 여기서 
+                    Throwable exc = wrappedExc.getCause();
+                    System.out.println(m + " failed: " + exc);
+                } catch (Exception exc) {
+                    // 애너테이션을 잘못 사용했을 때
+                    System.out.println("Invalid @Test: " + m);
+                }
+            }
+        }
+        
+    }
+}
+
+```
+
+
+
+이제 특정 예외를 던져야 성공하는 테스트를 지원해보자. 그러려면 새로운 애너테이션 타입이 필요하다.
+
+```java
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface ExceptionTest {
+    Class<? extends Throwable> value(); // 이제 매개변수를 받음
+}
+```
+
+이 애너테이션은 모든 예외 타입을 수용한다는 매개변수 타입을 가지고 있다. 다음은 실제 사용 예시이다.
+
+```java
+public class Sample2 {
+    @ExceptionTest(ArithmeticException.class) // 클래스 리터럴이 매개변수의 값으로 사용 됨
+    public static void m1(){
+        int i = 0;
+        i = i / i;
+    }
+    
+    @ExceptionTest(ArithmeticException.class) // 클래스 리터럴이 매개변수의 값으로 사용 됨
+    public static void m2(){
+        int[] a = new int[0];
+        int i = a[1];
+    }
+    
+    @ExceptionTest(ArithmeticException.class) // 클래스 리터럴이 매개변수의 값으로 사용 됨
+    public static void m3(){
+        
+    }
+}
+
+```
+
+이제 이 애너테이션을 다루도록 테스트 도구 RunTests를 수정해보자.&#x20;
+
+```java
+ if (m.isAnnotationPresent(Test.class)) {
+                tests++;
+                try {
+                    m.invoke(null);
+                    passed++;
+                } catch (InvocationTargetException wrappedExc) {
+                    Throwable exc = wrappedExc.getCause();
+                    System.out.println(m + " failed: " + exc);
+                    Class<? extends Throwable> excType = m.getAnnotation(ExceptionTest.class).value();
+                    if (excType.isInstance(exc)) {
+                        passed++;
+                    } else {
+                        System.out.println("Expected: " + excType.getName() + ", got: " + exc);
+                    }
+                } catch (Exception exc) {
+                    System.out.println("Invalid @Test: " + m);
+                }
+            }
+```
+
+`m.getAnnotation(ExceptionTest.class).value();`  애너테이션의 매개변수인 ArithmeticException를 가져 온 뒤 실제 발생한 오류와 같은지 체크하도록 수정되었다.
+
+
+
+이제 예외를 여러 개 명시하고 그중 하나가 발생하면 성공하게 만들어보자. 여러 매개변수를 받으려면 배열로 수정하면 된다.&#x20;
+
+```java
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+public @interface ExceptionTest {
+    Class<? extends Throwable>[] value(); // 이제 매개변수를 여러개 받음
+}
+```
+
+배열 매개변수를 받는 애너테이션용 문법은 유연하기 때문에 기존 @ExceptionTest들을 수정 없이 사용 가능하다.&#x20;
+
+원소가 여럿인 배열로 지정할 때는 중괄호로 감싸고 쉼표로 구분해주면 된다.
+
+```java
+    @ExceptionTest({IndexOutOfBoundsException.class, NullPointerException.class}) // 클래스 리터럴이 매개변수의 값으로 사용 됨
+    public static void m4(){
+        
+    }
+```
+
+
+
+자바8부터 @repeatable 메타애너테이션을 통해 여러 개의 값을 받는 애너테이션을 선언할 수도 있다.
+
+
+
+## 40. @Override 애너테이션을 일관되게 사용하라
+
+상위 클래스의 메서드를 재정의 했다면 @Override 애너테이션을 명시해 실수로 오버로드하는 일이 발생하지 않도록 하자. 구체 클래스가 상위 클래스의 추상 메서드를 재정의한 경우에는 optional이지만 그냥 다는게 좋을 것 같다.
+
+
+
+## 41. 정의하려는 것이 타입이면 마커 인터페이스를 사용하라&#x20;
+
+아무 메서드도 담고 있지 않고, 단지 자신을 구현하는 클래스가 특정 속성을 가지고 있다는 것을 알려주는 인터페이스를 **마커 인터페이스**라고 한다. Serializable 인터페이스가 좋은 예이다. 이 인터페이스를 구현한 클래스의 인스턴스는 ObjectOutputStream을 통해 쓸 수 있다고, 즉 직렬화가 가능하다는 것을 알려준다.
+
+### 마커 인터페이스가 마커 애너테이션 보다 좋은 점&#x20;
+
+1. 마커 인터페이스는 이를 구현한 클래스의 인스턴스를 구분하는 타입으로 쓸 수 있다.&#x20;
+
+마커 인터페이스도 어엿한 타입이기 때문에, 마커 애너테이션을 사용하면 런타임에야 발견될 오류를 마커 인터페이스라면 컴파일 단계에서 발견할 수 있다.&#x20;
+
+
+
+2.
+
 
 
 
