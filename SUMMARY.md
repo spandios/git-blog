@@ -44,8 +44,8 @@
       * [생성자와 프로퍼티](jvm-language/kotlin/kotlin-in-action/class/2/README.md)
         * [생성자](jvm-language/kotlin/kotlin-in-action/class/2/undefined.md)
         * [프로퍼티](jvm-language/kotlin/kotlin-in-action/class/2/undefined-1.md)
-      * [데이터 클래스](jvm-language/kotlin/kotlin-in-action/class/undefined.md)
-      * [클래스 위임](jvm-language/kotlin/kotlin-in-action/class/undefined-1.md)
+      * [데이터 클래스](jvm-language/kotlin/kotlin-in-action/class/dataclass.md)
+      * [클래스 위임](jvm-language/kotlin/kotlin-in-action/class/class-delegating.md)
       * [object 키워드](jvm-language/kotlin/kotlin-in-action/class/object.md)
 
 ## Architecture
