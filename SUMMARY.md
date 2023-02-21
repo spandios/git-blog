@@ -25,14 +25,15 @@
 
 ## JVM Language
 
-* [JVM](java/jvm.md)
-  * [GabageCollection](java/gabagecollection.md)
-* [Effective Java](java/effective-java/README.md)
-  * [객체 생성과 파괴](java/effective-java/undefined.md)
-  * [모든 객체의 공통 메서드](java/effective-java/undefined-1.md)
-  * [클래스와 인터페이스](java/effective-java/undefined-2.md)
-  * [제네릭](java/effective-java/undefined-3.md)
-  * [열거 타입과 애너테이션](jvm-language/effective-java/enum-annotation.md)
+* [Java](jvm-language/java/README.md)
+  * [JVM](jvm-language/java/jvm/README.md)
+    * [GabageCollection](jvm-language/java/jvm/gabagecollection.md)
+  * [Effective Java](jvm-language/java/effective-java/README.md)
+    * [객체 생성과 파괴](jvm-language/java/effective-java/undefined.md)
+    * [모든 객체의 공통 메서드](jvm-language/java/effective-java/undefined-1.md)
+    * [클래스와 인터페이스](jvm-language/java/effective-java/undefined-2.md)
+    * [제네릭](jvm-language/java/effective-java/undefined-3.md)
+    * [열거 타입과 애너테이션](jvm-language/java/effective-java/enum-annotation.md)
 * [Kotlin](jvm-language/kotlin/README.md)
   * [Kotlin in Action](jvm-language/kotlin/kotlin-in-action/README.md)
     * [코틀린이란?](jvm-language/kotlin/kotlin-in-action/undefined.md)
