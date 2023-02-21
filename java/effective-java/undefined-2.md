@@ -281,9 +281,9 @@ Set<E> s = new InstrumentedSet<>(new HashSet<>(INIT_CAPACITY));
 
 가장 대표적인 예로 AbstractList가 있다. 만약 추상 골격 구현 클래스 없이 int 배열을 List로 반환하는 정적 메서드를 만드려면 아래와 같이 구현해야할 모든 메서드를 구현해야한다.
 
-<figure><img src="../../../.gitbook/assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.38.33.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.38.33.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.41.50.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.41.50.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -291,9 +291,9 @@ Set<E> s = new InstrumentedSet<>(new HashSet<>(INIT_CAPACITY));
 
 
 
-<figure><img src="../../../.gitbook/assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.41.17.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.41.17.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.39.08.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.39.08.png" alt=""><figcaption></figcaption></figure>
 
 ###
 
@@ -505,7 +505,7 @@ class Rectangle extends Figure{
 * 바깥 클래스의 멤버도 아니고, 쓰이는 시점에서 선언과 동시에 인스턴스가 만들어진다.
 * 주로 정적 팩터리 메서드를 구현할 때 사용 된다.
 
-<figure><img src="../../../.gitbook/assets/스크린샷 2023-01-31 오후 8.41.50.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/스크린샷 2023-01-31 오후 8.41.50.png" alt=""><figcaption></figcaption></figure>
 
 
 
