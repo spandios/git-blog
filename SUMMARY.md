@@ -47,6 +47,7 @@
       * [데이터 클래스](jvm-language/kotlin/kotlin-in-action/class/undefined.md)
       * [클래스 위임](jvm-language/kotlin/kotlin-in-action/class/undefined-1.md)
       * [object 키워드](jvm-language/kotlin/kotlin-in-action/class/object.md)
+    * [Lambda](jvm-language/kotlin/kotlin-in-action/lambda.md)
 
 ## Architecture
 
@@ -103,4 +104,5 @@
       * [Builder Pattern](cs/design-pattern/undefined/builder-pattern.md)
       * [Prototype Pattern](cs/design-pattern/undefined/prototype-pattern.md)
   * [Network](cs/network.md)
-  * [OS](cs/os.md)
+  * [OS](cs/os/README.md)
+    * [Thread](cs/os/thread.md)
