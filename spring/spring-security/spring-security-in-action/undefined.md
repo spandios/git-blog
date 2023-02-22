@@ -102,7 +102,7 @@ public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
 [https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter](https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter)
 
-추후 권한부여 챕터 때 이제 어떤 방식을 권장하는지 알아보겠다.
+권한부여 챕터 때 어떤 식으로 권장하는지 알아보겠다.
 
 또, 앞서 빈으로 등록한 방식 이외에 WebSecurityConfigurerAdapter의 configure 메서드를 재정의 해 AuthenticationManagerBuilder를 이용하는 방법도 있지만, Deprecated된 이상 더 이상 알아보지 말자
 {% endhint %}
