@@ -55,7 +55,7 @@ MSA는 특정 서비스를 구축하는 데 사용하는 언어나 저장소를 
 
 
 
-<img src="../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+<img src="../.gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
 
 ### SOA
 

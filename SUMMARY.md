@@ -104,5 +104,5 @@
       * [Builder Pattern](cs/design-pattern/undefined/builder-pattern.md)
       * [Prototype Pattern](cs/design-pattern/undefined/prototype-pattern.md)
   * [Network](cs/network.md)
-  * [OS](cs/os/README.md)
+  * [OS](cs/os.md)
     * [Thread](cs/os/thread.md)

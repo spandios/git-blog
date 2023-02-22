@@ -242,7 +242,7 @@ val strings = listOf("abc", "def")
 strings.flatMap{it.toList()} ==> [a,b,c,d,e,f]
 ```
 
-<img src="../../../.gitbook/assets/file.excalidraw (4).svg" alt="flatMap" class="gitbook-drawing">
+<img src="../../../.gitbook/assets/file.excalidraw.svg" alt="flatMap" class="gitbook-drawing">
 
 먼저 문자열을 리스트로 변환(map)하면 `[[a,b,c],[d,e,f]]` 처럼 리스트 안에 리스트로 될 것이다. 그리고 flatten을 통해 평평하게 만들면 `[a,b,c,d,e,f]` 하나의 리스트로 평평해진다.
 
