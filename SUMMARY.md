@@ -48,6 +48,8 @@
       * [클래스 위임](jvm-language/kotlin/kotlin-in-action/class/undefined-1.md)
       * [object 키워드](jvm-language/kotlin/kotlin-in-action/class/object.md)
     * [Lambda](jvm-language/kotlin/kotlin-in-action/lambda.md)
+    * [코틀린 타입 시스템](jvm-language/kotlin/kotlin-in-action/undefined-1/README.md)
+      * [널 가능성](jvm-language/kotlin/kotlin-in-action/undefined-1/undefined.md)
 
 ## Architecture
 
