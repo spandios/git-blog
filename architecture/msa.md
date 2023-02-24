@@ -12,7 +12,7 @@ description: MSA에 대해 알아보자
 
 하나의 시스템이 서비스 전체 기능을 처리하도록 설계하는 것으로 과거부터 지금까지 많이 사용되는 아키텍처이다. 모놀로틱은 한 애플리케이션에서 다양한 비지니스 로직을 처리하며, 하나의 데이터 저장소를 사용한다.&#x20;
 
-<img src="../.gitbook/assets/file.excalidraw (2).svg" alt="" class="gitbook-drawing">
+<img src="../.gitbook/assets/file.excalidraw (2) (2).svg" alt="" class="gitbook-drawing">
 
 
 
@@ -55,7 +55,7 @@ MSA는 특정 서비스를 구축하는 데 사용하는 언어나 저장소를 
 
 
 
-<img src="../.gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
+<img src="../.gitbook/assets/file.excalidraw (1) (1).svg" alt="" class="gitbook-drawing">
 
 ### SOA
 
