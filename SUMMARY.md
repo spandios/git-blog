@@ -50,6 +50,8 @@
     * [Lambda](jvm-language/kotlin/kotlin-in-action/lambda.md)
     * [코틀린 타입 시스템](jvm-language/kotlin/kotlin-in-action/type-system/README.md)
       * [널 가능성](jvm-language/kotlin/kotlin-in-action/type-system/nullable.md)
+      * [원시 타입](jvm-language/kotlin/kotlin-in-action/type-system/primitive-type.md)
+      * [컬렉션과 배열](jvm-language/kotlin/kotlin-in-action/type-system/collection-array.md)
 
 ## Architecture
 
