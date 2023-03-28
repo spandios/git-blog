@@ -24,7 +24,7 @@
 
 여러 하위 도메인을 하나의 바운디드 컨텍스트에서 개발할 때는 논리적으로 컨텍스트를 나누도록 하자. 하위 도메인 모델들이 무분별하게 섞이지 않게 해야하기 때문이다. 아래 그림처럼 물리적으로 하나의 컨텍스트만 가지더라도 내부적으로는 논리적으로 컨텍스트를 분리하는 것이다.
 
-<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.26.54.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.26.54 (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../../.gitbook/assets/스크린샷 2023-02-14 오전 11.28.39.png" alt=""><figcaption><p>어떤 문맥에 있냐에 따라 도메인은 각각 다른 모델이다.</p></figcaption></figure>
 

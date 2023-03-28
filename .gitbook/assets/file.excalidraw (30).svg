@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.265625 81.80859375" width="283.265625" height="81.80859375">
+  <!-- svg-source:excalidraw -->
+  <!-- payload-type:application/vnd.excalidraw+json --><!-- payload-version:2 --><!-- payload-start -->eyJ2ZXJzaW9uIjoiMSIsImVuY29kaW5nIjoiYnN0cmluZyIsImNvbXByZXNzZWQiOnRydWUsImVuY29kZWQiOiJ4nM2VXW+bMFx1MDAxNIbv8ytcInq7UTBgnNy1+9CirpWqTJrUaVx1MDAxNy64xIpjU9tpk1b577NcdTAwMWSGTbJunbSLcYHgfHBeXHUwMDFmP8c8j8bjSG9bXHUwMDEyTcdcdTAwMTHZVJjRWuLH6I21P1x1MDAxMKmo4MZcdTAwMDXcu1x1MDAxMmtZuciF1q2anp7ito1cdTAwMWKqb4VYxpVY7dNcYiMrwrUygd/M+3j87O5BIUkqjXnDiEtwLl8rQ4fGK8Fd2XRcdTAwMDIgzFx1MDAwYpjAPoKq96acJrVx32GmiPdYU3QzTzeb/Fx1MDAxYz3d37ytq5mAny47mS7ojjI211u2X1x1MDAxNK5cdTAwMTZrXHUwMDE5aFJaiiX5Smu9sNVcdTAwMGbsfZ5cdTAwMTKmaT5LinWz4ESpQY5ocUX11tqSpLfumzBcdTAwMWR7y8ZFwFwiRkWRQ1RcdTAwMTa9x+XmRVxm87zIUlBcdTAwMWPIeSeYkFbOSeIuL+hcdTAwMTZXy8ao4nVcdTAwMWajJeaqxdJsk4977Fx1MDAxNlxuYFx1MDAxNlx1MDAwM1jAoMSC0GahjVx1MDAwZqYxSlAxyVx1MDAwMmGKuPaDXHUwMDEylkma+t2zNdtZ7Tj4XHUwMDFltofXXXt+guHRyDrLzqu38Vx1MDAxZlx1MDAwZZFcbrFcdTAwMWGgpcnGLylcdTAwMDBhNl8/yOt7yODF58tLcZVf81xcRH3crnvyOtdtjfdcXKWwLFx1MDAwYlTkKUrRpPczypfGydeMeZuollx1MDAxZcVRsJCjXHUwMDExXHUwMDE46FxmJy15kf4yy8pcdEzA6+n/9aL/d/rTXHUwMDA0xFx1MDAxM4RcdTAwMDBcbiF3uTCPk/zQ86/xXHUwMDBmN7nnXHUwMDFlXHUwMDFj4Z5CI6TMQJr8XHUwMDA18Fx1MDAwM1qOyP5cdTAwMWR8XHUwMDAw5MHB+Gf4/CZcdTAwMGKu5/SJXGbZstaPeEXZdrBPjkrToIszzoW2XHUwMDEyOn1hO1x1MDAxNTHlXHUwMDFkkWiQeMZoY1x1MDAxMY4qk0DkgG5Nza+lXHUwMDBmWNG6XHUwMDBlXHUwMDBm/8qoweabcvaaQ1tI2lCO2ZdcdTAwMTfF7idv1I1zZP5Sc+vvT1x1MDAxY7NTtO6a4ntcdTAwMTg9UPJ4fkzLyZ277FfdNNu5Ie742o12P1x1MDAwMP7L2ZoifQ==<!-- payload-end -->
+  <defs>
+    <style class="style-fonts">
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://unpkg.com/@excalidraw/excalidraw@0.14.2/dist/excalidraw-assets/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://unpkg.com/@excalidraw/excalidraw@0.14.2/dist/excalidraw-assets/Cascadia.woff2");
+      }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="283.265625" height="81.80859375" fill="#ffffff"/><g stroke-linecap="round" transform="translate(10 10) rotate(0 131.6328125 30.904296875)"><path d="M15.45 0 M15.45 0 C105.82 -2.06, 198.26 -0.76, 247.81 0 M15.45 0 C104.48 0.36, 194.56 0.6, 247.81 0 M247.81 0 C258.76 -0.54, 264.7 7.02, 263.27 15.45 M247.81 0 C260.16 1.1, 263.28 2.96, 263.27 15.45 M263.27 15.45 C265.32 24.69, 265.13 34.58, 263.27 46.36 M263.27 15.45 C263.57 25.71, 262.59 36.95, 263.27 46.36 M263.27 46.36 C263.97 55.76, 259.26 63.4, 247.81 61.81 M263.27 46.36 C261.04 56.82, 256.61 62.65, 247.81 61.81 M247.81 61.81 C183.13 60.17, 120.55 61.89, 15.45 61.81 M247.81 61.81 C198.69 62.82, 149.63 63.08, 15.45 61.81 M15.45 61.81 C6.38 60.43, 0.12 55.74, 0 46.36 M15.45 61.81 C6.17 62.22, 1.14 58.5, 0 46.36 M0 46.36 C0.83 36.93, -1.5 29.8, 0 15.45 M0 46.36 C0.54 39.8, -0.32 31.5, 0 15.45 M0 15.45 C1.09 5.62, 7.04 -1.93, 15.45 0 M0 15.45 C1.78 6.84, 6.45 -0.42, 15.45 0" stroke="#000000" stroke-width="1" fill="none"/></g><g transform="translate(47.1328125 28.404296875) rotate(0 94.5 12.5)"><text x="94.5" y="18" font-family="Virgil, Segoe UI Emoji" font-size="20px" fill="#000000" text-anchor="middle" style="white-space: pre;" direction="ltr">KAnnotatedElement</text></g></svg>

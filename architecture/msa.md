@@ -1,7 +1,3 @@
----
-description: MSA에 대해 알아보자
----
-
 # MSA
 
 수년간 웹 애플리케이션에서 가장 많은 관심을 받은 키워드는 MSA일 것이다. MSA는 현재도 지속적으로 아마존, 넷플릭스 등의 빅테크 기업들이 선도하고 있으며 아직도 많은 관심을 받고 있다. 이번 글은 MSA가 무엇인지에 대해 알아보려고 한다.&#x20;
@@ -12,7 +8,7 @@ description: MSA에 대해 알아보자
 
 하나의 시스템이 서비스 전체 기능을 처리하도록 설계하는 것으로 과거부터 지금까지 많이 사용되는 아키텍처이다. 모놀로틱은 한 애플리케이션에서 다양한 비지니스 로직을 처리하며, 하나의 데이터 저장소를 사용한다.&#x20;
 
-<img src="../.gitbook/assets/file.excalidraw (2) (2).svg" alt="" class="gitbook-drawing">
+<img src="../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
 
 
 
@@ -55,7 +51,7 @@ MSA는 특정 서비스를 구축하는 데 사용하는 언어나 저장소를 
 
 
 
-<img src="../.gitbook/assets/file.excalidraw (1) (1).svg" alt="" class="gitbook-drawing">
+<img src="../.gitbook/assets/file.excalidraw (15).svg" alt="" class="gitbook-drawing">
 
 ### SOA
 
@@ -163,8 +159,6 @@ MSA는 애플리케이션 뿐 아니라 CI/CD, 모니터링, APM, Log 시스템 
 
 
 ### 참고
-
-
 
 스프링 부트로 개발하는 MSA 컴퍼넌트
 
