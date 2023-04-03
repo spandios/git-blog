@@ -184,7 +184,7 @@ pkJoinColumns = @PrimaryKeyJoinColumn(name= "id")
 public class Article{
 
     @Embedded
-    private Artcile
+    private ArtcileContent content;
 }
 ```
 
