@@ -92,7 +92,6 @@
     * [예외](language/java/effective-java/undefined-7.md)
     * [동시성](language/java/effective-java/undefined-8.md)
     * [직렬화](language/java/effective-java/undefined-9.md)
-  * [Static](language/java/static.md)
 * [Javascript](language/javascript/README.md)
   * [Javascript 엔진과 NonBlocking 동작원리](language/javascript/javascript-nonblocking.md)
   * [실행 컨텍스트](language/javascript/undefined.md)
