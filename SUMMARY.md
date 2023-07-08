@@ -124,7 +124,8 @@
 ***
 
 * [DB](db/README.md)
-  * [Mysql](db/mysql.md)
+  * [Mysql](db/mysql/README.md)
+    * [쿼리 최적화](db/mysql/undefined.md)
 * [Devops](devops/README.md)
   * [Conventional Commit](devops/conventional-commit/README.md)
     * [Commit Hooks](devops/conventional-commit/commit-hooks.md)
