@@ -30,9 +30,10 @@
   * [Legacy](spring/spring-security/legacy/README.md)
     * [JWT 인증](spring/spring-security/legacy/undefined.md)
     * [인가](spring/spring-security/legacy/undefined-1.md)
-* [Metric](spring/metric.md)
+* [Metric](spring/metric/README.md)
+  * [OpenTelemetry](spring/metric/opentelemetry.md)
 * [Test](spring/test/README.md)
-  * [Kotest](spring/test/kotest.md)
+  * [Kotest](spring/test/spring-rest-docs-swagger.md)
 * [Spring Boot 프로젝트 설정](spring/setting.md)
 
 ## Language
