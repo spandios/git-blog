@@ -35,7 +35,11 @@ BeanFactory를 비롯해 여러가지 추가적인 부가 기능의 인터페이
 
 <figure><img src="../../../.gitbook/assets/스크린샷 2023-02-03 오전 11.19.24.png" alt=""><figcaption></figcaption></figure>
 
+<div align="center">
+
 <figure><img src="../../../.gitbook/assets/스크린샷 2023-02-03 오후 6.50.39.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 * #### Application Context의 부가기능
   * 메시지소스를 활용한 국제화 기능

@@ -20,7 +20,7 @@ reflection 기술을 이용하면 매번 대상 클래스에 대응되는 프록
 [reflection.md](../../../language/kotlin/kotlin-in-action/annotation-reflection/reflection.md)
 {% endcontent-ref %}
 
-****
+
 
 ### JDK 동적 프록시&#x20;
 

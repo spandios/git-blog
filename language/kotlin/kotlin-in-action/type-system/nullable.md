@@ -24,7 +24,7 @@ fun strLen(s:String) = s.length
 
 null이거나 널이 될 수 있는 것을 인자로 넘길 수 없다. 만약 그런 값을 넘긴다면 컴파일 때부터 오류가 발생한다. String 타입의 s 인자는 절대 null이 오지 못하기 때문에 **실행 시점에 NPE 에러가 날 일이 없다.**&#x20;
 
-****
+
 
 #### Nullable
 

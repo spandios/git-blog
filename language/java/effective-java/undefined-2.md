@@ -80,7 +80,7 @@ public void setY(double y){this.y = y;}
 
 그와 달리 명령형 프로그래밍에서의 메서드에서는 피연산자인 자신을 수정해 상태가 변하게 된다.
 
-****
+
 
 ### **불변객체의 장점**
 
@@ -123,7 +123,7 @@ public static Complex valueOf(double re, double im){
 }
 ```
 
-****
+
 
 ### **정리**
 
@@ -281,7 +281,11 @@ Set<E> s = new InstrumentedSet<>(new HashSet<>(INIT_CAPACITY));
 
 가장 대표적인 예로 AbstractList가 있다. 만약 추상 골격 구현 클래스 없이 int 배열을 List로 반환하는 정적 메서드를 만드려면 아래와 같이 구현해야할 모든 메서드를 구현해야한다.
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.38.33.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 <figure><img src="../../../.gitbook/assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-31_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_8.41.50.png" alt=""><figcaption></figcaption></figure>
 
