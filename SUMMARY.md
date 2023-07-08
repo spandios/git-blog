@@ -30,12 +30,9 @@
   * [Legacy](spring/spring-security/legacy/README.md)
     * [JWT 인증](spring/spring-security/legacy/undefined.md)
     * [인가](spring/spring-security/legacy/undefined-1.md)
-* [Logging](spring/logging/README.md)
-  * [Filter와 AOP로 Logging 해보기](spring/logging/filter-aop-logging.md)
-  * [Elastic Search와 연동 해보기](spring/logging/elastic-search.md)
-  * [APM](spring/logging/apm.md)
+* [Metric](spring/metric.md)
 * [Test](spring/test/README.md)
-  * [Spring Rest Docs Swagger](spring/test/spring-rest-docs-swagger.md)
+  * [Kotest](spring/test/kotest.md)
 * [Spring Boot 프로젝트 설정](spring/setting.md)
 
 ## Language
@@ -155,4 +152,3 @@
     * [Thread](cs/os/thread.md)
 * [Sandbox](sandbox/README.md)
   * [모두의 MBTI](sandbox/mbti.md)
-  * [이고다](sandbox/undefined.md)
