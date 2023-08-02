@@ -12,57 +12,11 @@ OpenTelemtry는 기존의 모니터링과 다르게 데이터를 수집하고 �
 
 
 
-### Docker-compose를 통해 환경 구성하기
 
-```yaml
-version: "3"
-services:
-
-  otel-collector:
-    container_name: otel-collector
-    image: otel/opentelemetry-collector:latest
-    command: [ "--config=/etc/otel-collector-config.yaml" ]
-    volumes:
-      - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
-      
-
-
-# otel-collector-config.yaml
-receivers:
-  otlp:
-    protocols:
-      grpc: 
-processors:
-  batch:
-exporters:
-  prometheus:
-    endpoint: "0.0.0.0:9090" # 보낼 prometheus 주소
-  logging:
-  jaeger:
-    endpoint: "jaeger:14250"  # 보낼 jaeger 주소
-    tls:
-      insecure: true
-
-
-service:
-  pipelines:
-    traces:
-      receivers: [ otlp ]
-      processors: [ batch ] # 배치 처리
-      exporters: [ logging, jaeger ] # trace 정보를 jaeger에 전달
-    metrics:
-      receivers: [ otlp ]
-      exporters: [ logging, prometheus ] # metric 정보를 prometheus에 전달
-    logs:
-      receivers: [ otlp ]
-      exporters: [ logging ]
-
-
-```
 
 ### OtelCollector&#x20;
 
-먼저 핵심인 Collector를 구성한다. Collector는 크게 Receivers, Proceecors, Exporters로 기능을 나누고 있다.&#x20;
+먼저 핵심인 Collector를 알아보고 docker-compose로 띄어보자. Collector는 말 그대로 소스(클라이언트)로부터 데이터를 수집 후 Collector는 크게 Receivers, Proceecors, Exporters로 기능을 나누고 있다.&#x20;
 
 <figure><img src="../../.gitbook/assets/028_OTELGraphic_v1-01-2048x772.png" alt=""><figcaption><p>Collector</p></figcaption></figure>
 
@@ -81,4 +35,18 @@ Exporters로 데이터가 가기 전 추가적인 처리를 하는 곳이다. �
 
 
 
+
+```yaml
+version: "3"
+services:
+
+  otel-collector:
+    container_name: otel-collector
+    image: otel/opentelemetry-collector:latest
+    command: [ "--config=/etc/otel-collector-config.yaml" ]
+    volumes:
+      - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
+
+
+```
 
