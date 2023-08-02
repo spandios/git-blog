@@ -174,3 +174,5 @@ prometheus도 잘 받아오고 있는 것을 볼 수 있다.&#x20;
 #### Grafana
 
 <figure><img src="../../.gitbook/assets/스크린샷 2023-08-03 오전 1.35.18.png" alt=""><figcaption></figcaption></figure>
+
+prometheus endpoint는 [http://host.docker.internal:9090](http://host.docker.internal:9090)로 해야한다.
