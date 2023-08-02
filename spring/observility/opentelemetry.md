@@ -162,4 +162,7 @@ scrape_configs:
 
 ### Jaeger
 
-이제 `curl localhost:8080를호출한 뒤`&#x20;
+이제 `curl localhost:8080를` 호출한 뒤 [http://localhost:16686/](http://localhost:16686/)속하면 trace를 볼 수 있다.&#x20;
+
+<figure><img src="../../.gitbook/assets/스크린샷 2023-08-03 오전 1.15.00.png" alt=""><figcaption></figcaption></figure>
+
