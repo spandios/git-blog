@@ -65,10 +65,10 @@ processors:
   batch:
 exporters:
   prometheus:
-    endpoint: "0.0.0.0:9090" # prometheus endpoint
+    endpoint: "0.0.0.0:8889"
   logging:
   jaeger:
-    endpoint: "jaeger:14250" # jager endpoint
+    endpoint: "jaeger:14250"
     tls:
       insecure: true
 
@@ -76,15 +76,16 @@ exporters:
 service:
   pipelines:
     traces:
-      receivers: [ otlp ] # otlp로 받고 
-      processors: [ batch ] # 배치로 전처리하면서 
-      exporters: [ logging, jaeger ] # jaeger로 traces 정보 전달
+      receivers: [ otlp ]
+      processors: [ batch ]
+      exporters: [ logging, jaeger ]
     metrics:
       receivers: [ otlp ]
-      exporters: [ logging, prometheus ]  # prometheus로 메트릭 정보 전달
+      processors: [ batch ]
+      exporters: [ logging, prometheus ]
     logs:
       receivers: [ otlp ]
-      exporters: [ logging ] 
+      exporters: [ logging ]
 
 ```
 
@@ -122,20 +123,12 @@ prometheus-config.yml
 
 ```yaml
 # prometheus가 주기적으로 metric 정보를 직접 app에서 가져온다.
-global:
-  scrape_interval: 15s
-  scrape_timeout: 10s
-  evaluation_interval: 15s
 scrape_configs:
-  - job_name: app
-    honor_timestamps: true
-    scrape_interval: 15s
-    scrape_timeout: 10s
-    metrics_path: /actuator/prometheus # spring boot actuator + prometheus
-    scheme: http
+  - job_name: 'otel-collector'
+    scrape_interval: 2s
     static_configs:
-      - targets:
-          - application:8080
+      - targets: [ 'otel-collector:8889' ]
+      - targets: [ 'otel-collector:8888' ]
 ```
 
 
@@ -162,7 +155,19 @@ scrape_configs:
 
 ### Jaeger
 
-이제 `curl localhost:8080를` 호출한 뒤 [http://localhost:16686/](http://localhost:16686/)속하면 trace를 볼 수 있다.&#x20;
+
 
 <figure><img src="../../.gitbook/assets/스크린샷 2023-08-03 오전 1.15.00.png" alt=""><figcaption></figcaption></figure>
+
+이제 `curl localhost:8080를` 호출한 뒤 [http://localhost:16686/](http://localhost:16686/)속하면 trace를 볼 수 있다.&#x20;
+
+
+
+### Prometheus
+
+![](<../../.gitbook/assets/스크린샷 2023-08-03 오전 1.20.43.png>)
+
+prometheus도 잘 받아오고 있는 것을 볼 수 있다.&#x20;
+
+
 
