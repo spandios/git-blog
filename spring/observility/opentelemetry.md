@@ -16,7 +16,11 @@ OpenTelemtry는 기존의 모니터링과 다르게 데이터를 수집하고 �
 
 ### OtelCollector&#x20;
 
-먼저 핵심인 Collector를 알아보고 docker-compose로 띄어보자. Collector는 말 그대로 소스(클라이언트)로부터 데이터를 수집 후 Collector는 크게 Receivers, Proceecors, Exporters로 기능을 나누고 있다.&#x20;
+먼저 핵심인 Collector를 알아보자.&#x20;
+
+Collector는 말 그대로 소스(클라이언트)로부터 데이터를 수집 후&#x20;
+
+Collector는 크게 Receivers, Proceecors, Exporters로 기능을 나누고 있다.&#x20;
 
 <figure><img src="../../.gitbook/assets/028_OTELGraphic_v1-01-2048x772.png" alt=""><figcaption><p>Collector</p></figcaption></figure>
 
