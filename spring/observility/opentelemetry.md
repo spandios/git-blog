@@ -36,21 +36,26 @@ Exporters로 데이터가 가기 전 추가적인 처리를 하는 곳이다. �
 
 
 
-docker-compose.yml를 작성하자
+## Docker-compose
+
+otel-collector를  설정하자
 
 ```yaml
 version: "3"
 services:
-
   otel-collector:
     container_name: otel-collector
     image: otel/opentelemetry-collector:latest
     command: [ "--config=/etc/otel-collector-config.yaml" ]
     volumes:
       - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
-
-
-
+    ports:
+      - "4317:4317"   # otlp receiver
+      - "8888:8888"   # Prometheus metrics exposed by the collector
+      - "8889:8889"   # Prometheus exporter metrics
+      - "13133:13133" # health_check extension
+      - "55679:55679" # zpages extension
+      - "1888:1888"   # pprof extension
 
 ```
 
@@ -68,7 +73,7 @@ exporters:
     endpoint: "0.0.0.0:8889"
   logging:
   jaeger:
-    endpoint: "jaeger:14250"
+    endpoint: "jaeger:14250" 
     tls:
       insecure: true
 
@@ -91,9 +96,11 @@ service:
 
 
 
-### 나머지 docker-compose.yml를 추가한다.&#x20;
+나머지 docker-compose.yml를 추가한다.&#x20;
 
-### Jaeger, Prometheus, Grafana
+
+
+### Jaeger, Prometheus, Grafana, Application
 
 ```yaml
 # 예거는 분산환경에서 트레이싱할 수 있는 오픈소스 프로젝트이다. 고로 만들어졌는지 고 케릭터가 있다. 
@@ -119,7 +126,7 @@ service:
       
 ```
 
-prometheus-config.yml
+#### prometheus-config.yml
 
 ```yaml
 # prometheus가 주기적으로 metric 정보를 직접 app에서 가져온다.
@@ -133,9 +140,7 @@ scrape_configs:
 
 
 
-### Application
-
-다음은 spring application 설정이다.
+#### application
 
 ```yaml
   application:
@@ -175,4 +180,4 @@ prometheus도 잘 받아오고 있는 것을 볼 수 있다.&#x20;
 
 <figure><img src="../../.gitbook/assets/스크린샷 2023-08-03 오전 1.35.18.png" alt=""><figcaption></figcaption></figure>
 
-prometheus endpoint는 [http://host.docker.internal:9090](http://host.docker.internal:9090)로 해야한다.
+grafana datasource를 추가할 때 prometheus endpoint는 [http://host.docker.internal:9090](http://host.docker.internal:9090)로 해야한다.
