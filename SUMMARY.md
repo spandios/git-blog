@@ -26,7 +26,7 @@
     * [사용자 관리](spring/spring-security/spring-security-in-action/undefined-1/README.md)
       * [UserDetails](spring/spring-security/spring-security-in-action/undefined-1/userdetails.md)
       * [UserDetailsService](spring/spring-security/spring-security-in-action/undefined-1/userdetailsservice.md)
-  * [암호 처리](spring/spring-security/undefined.md)
+    * [암호 처리](spring/spring-security/spring-security-in-action/undefined-2.md)
   * [Legacy](spring/spring-security/legacy/README.md)
     * [JWT 인증](spring/spring-security/legacy/undefined.md)
     * [인가](spring/spring-security/legacy/undefined-1.md)
@@ -123,8 +123,9 @@
 ***
 
 * [DB](db/README.md)
-  * [Mysql](db/mysql/README.md)
-    * [쿼리 최적화](db/mysql/undefined.md)
+  * [Transaction](db/transaction.md)
+  * [Untitled](db/untitled.md)
+  * [쿼리 최적화](db/undefined.md)
 * [Devops](devops/README.md)
   * [Conventional Commit](devops/conventional-commit/README.md)
     * [Commit Hooks](devops/conventional-commit/commit-hooks.md)
