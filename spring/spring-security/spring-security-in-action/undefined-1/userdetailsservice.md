@@ -56,35 +56,3 @@ JDBC를 통해 데이터베이스에 연결하여 저장된 사용자를 관리�
 어떤 테이블명에 어떤 컬럼명을 대상으로 사용자를 찾는 지에 대해 기본값이 있고 원한다면 쿼리를 변경해 커스텀 가능하다.&#x20;
 {% endhint %}
 
-
-
-## UserDetailsManager&#x20;
-
-UserDetailsService를 확장한 인터페이스로 생성, 수정, 삭제 등의 메서드 기능들을 명시한다.
-
-앞서 봤던 InMemoryUserDetailsManager는 사실 UserDetailsManager를 구현한 것이였고 때문에 createUser 메서드를 호출해 유저를 등록할 수 있었다.
-
-```java
-public interface UserDetailsManager extends UserDetailsService {
-    void createUser(UserDetails var1);
-
-    void updateUser(UserDetails var1);
-
-    void deleteUser(String var1);
-
-    void changePassword(String var1, String var2);
-
-    boolean userExists(String var1);
-}
-
-
-var userDetailsService = new InMemoryUserDetailsManager();
-
-var user = User.withUsername("heo")
-        .password("12345")
-        .authorities("read")
-        .build();
-
-userDetailsService.createUser(user);
-```
-
