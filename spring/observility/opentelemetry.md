@@ -78,11 +78,11 @@ service:
     traces:
       receivers: [ otlp ]
       processors: [ batch ]
-      exporters: [ logging, jaeger ]
+      exporters: [ logging, jaeger ] # jaeger에 trace 정보 전달 
     metrics:
       receivers: [ otlp ]
       processors: [ batch ]
-      exporters: [ logging, prometheus ]
+      exporters: [ logging, prometheus ] # prometheus에 metric 정보 전달
     logs:
       receivers: [ otlp ]
       exporters: [ logging ]
