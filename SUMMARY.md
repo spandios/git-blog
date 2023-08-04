@@ -122,10 +122,7 @@
 
 ***
 
-* [DB](db/README.md)
-  * [Transaction](db/transaction.md)
-  * [Untitled](db/untitled.md)
-  * [쿼리 최적화](db/undefined.md)
+* [DB](db.md)
 * [Devops](devops/README.md)
   * [Conventional Commit](devops/conventional-commit/README.md)
     * [Commit Hooks](devops/conventional-commit/commit-hooks.md)
