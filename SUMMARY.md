@@ -5,7 +5,7 @@
 ## Spring
 
 * [Core](spring/readme/README.md)
-  * [IoC / DI](spring/readme/ioc-di.md)
+  * [DI / IOC](spring/readme/ioc-di.md)
   * [Spring Container](spring/readme/spring-container/README.md)
     * [Component Scan](spring/readme/spring-container/component-scan.md)
     * [의존관계 자동주입](spring/readme/spring-container/autowired/README.md)
