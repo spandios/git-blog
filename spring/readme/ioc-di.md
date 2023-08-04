@@ -155,17 +155,6 @@ AppConfig처럼 객체에 대한 생성 및 생명주기 관리 기능을 스프
 
 IoC는 궁극적으로는 객체 간의 관심사 분리를 이루어 결합도를 낮추는 것을 목표로 하고 있다.
 
-### IoC와 DI의 관계
-
-<figure><img src="https://blog.kakaocdn.net/dn/eq6u5i/btrWLyyZK5F/v5eMkXemJ8yxSwm8eZtUpK/img.png" alt=""><figcaption><p>https://jwchung.github.io/DI%EB%8A%94-IoC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%84%EB%8F%84-%EB%90%9C%EB%8B%A4</p></figcaption></figure>
-
-\
-
-
-IoC와 DI는 별도의 개념이며 spring만의 특정 기술이 아니다.
-
-스프링은 IoC 개념을 활용해 객체지향 원칙을 지키고 편하게 객체를 관리할 수 있도록 DI Container를 적극적으로 사용하며, 이를 위해 DI를 사용한다. 서로 독립적인 기술이므로 의존성은 없지만 같이 사용하여 효율을 극대화한다.
-
 
 
 ### 마치며
