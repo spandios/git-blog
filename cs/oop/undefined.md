@@ -76,14 +76,16 @@ SOLID는 로버트 마틴이 객체지향 설계의 5가지 기본원칙을 마�
 다형성에 하위 클래스는 인터페이스 규약대로 정확히 지켜야한다.\
 
 
-4\. ISP(인터페이스 분리원칙)
+### 4. ISP(Interface Segration Principle) - 인터페이스 분리원칙
 
 범용 인터페이스 하나보다 특정 인터페이스로 나누어 명확하고 대체 가능한 인터페이스가 좋다.\
 
 
-## 5.**DIP(Dependency Inversion Principal) -  의존관계 역전 원칙**&#x20;
+### 5.**DIP(Dependency Inversion Principal) -  의존관계 역전 원칙**&#x20;
 
-고수준이 저수준에 의존하는 것을 역전 시켜 저수준이 고수준을 의존하게 하는 것입니다. 고수준이 바로 저수준을 의존하면 생기는 문제점을 본 뒤 DIP를 통해 해결해보겠습니다. 아래 예를 보시면 주문 서비스(고수준)가 Email 알림 서비스(저수준)를 의존하고 있습니다.
+고수준이 저수준에 의존하는 것을 역전 시켜 저수준이 고수준을 의존하게 하는 것이다.&#x20;
+
+고수준이 바로 저수준을 의존하면 생기는 문제점을 본 뒤 DIP를 통해 해결해보자. 아래 코드는 주문 서비스(고수준)가 Email 알림 서비스(저수준)를 의존하고 있다.
 
 ```typescript
 class OrderService {
@@ -108,18 +110,18 @@ class EmailNotifier{
 		emailService.send(user.email, meesage)
 	}
 }
+
 ```
-
-\
-
 
 <figure><img src="../../.gitbook/assets/img.png" alt=""><figcaption></figcaption></figure>
 
-이 의존관계 방향은 변경하기 어려운 코드입니다. 구현체(저수준)을 교체하거나 변경이 발생하면 그 구현체를 의존하는 모든 곳에서 수정해야할 작업이 많이 발생합니다. 예를들어 이메일 대신 문자 알림해야한다는 요구사항이 생긴다면 어떻게 될까요? 주문 서비스에서 EmailNofier 관련된 모든 부분을 수정해야합니다.
+이 의존관계 방향은 변경하기 어려운 코드이다. 구현체(저수준)을 교체하거나 변경이 발생하면 그 구현체를 의존하는 모든 곳에서 수정해야할 작업이 많이 발생한다.&#x20;
 
-문제점을 해결 하기 위해 DIP를 적용하면 되고 추상화가 필요합니다. 아래 코드는 이제 저수준인 EmailService은 고수준인 Notifier 추상화를 의존하고 있습니다.&#x20;
+예를들어 이메일 대신 문자 알림해야한다는 요구사항이 생긴다면 주문 서비스에서 EmailNofier 관련된 모든 부분을 수정해야한다.
 
-또, 더 이상 OrderService는 구현체 EmailNotifier에 의존하지 않고 같은 고수준 Notifier 추상화를 의존하고 있습니다. 추가적으로 의존성을 직접 생성하지 않고 생성자를 통해 주입받고 있는 것을 볼 수 있습니다.
+문제점을 해결 하기 위해 DIP를 적용하면 되고 추상화가 필요하다. 아래 코드는 이제 저수준인 EmailService은 고수준인 Notifier 추상화를 의존하고 있다.&#x20;
+
+또, 더 이상 OrderService는 구현체 EmailNotifier에 의존하지 않고 같은 고수준 Notifier 추상화를 의존하고 있다. 추가적으로 의존성을 직접 생성하지 않고 생성자를 통해 주입받고 있는 것을 볼 수 있다.
 
 ```typescript
 class OrderService {
@@ -161,7 +163,7 @@ interface Notifer{
 
 <figure><img src="../../.gitbook/assets/img (2).png" alt=""><figcaption></figcaption></figure>
 
-이제 알림 방식이 문자 알림으로 변경이 되도 고수준 OrderService의 코드는 변경할 필요가 없어집니다.
+이제 알림 방식이 문자 알림으로 변경이 되도 고수준 OrderService의 코드는 변경할 필요가 없어진다.
 
 ```typescript
 const orderService = new OrderService(smsNotifier);
