@@ -1,6 +1,6 @@
 # Table of contents
 
-* [개발 메모장](README.md)
+* [도서 정리](README.md)
 
 ## Spring
 
