@@ -1,6 +1,6 @@
 # Table of contents
 
-* [도서 정리](README.md)
+* [블로그](README.md)
 * [Javascript](javascript.md)
 
 ## Spring
