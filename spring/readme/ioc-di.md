@@ -1,4 +1,4 @@
-# DI / IOC
+# DI / IoC
 
 ### DI (Dependency Injection)
 
@@ -90,7 +90,7 @@ class OrderServiceImpl : OrderService {
 }
 ```
 
-discountPolicy변수를 보면 구현체가 아닌 DiscountPolicy Interface을 타입으로 받고 있으니 DIP를 지켰다고 할 수 있다. 또, 할인정책과 주문 서비스를 각각 분리해 역할을 나눴기 때문에, 할인정책 변경이 주문 서비스 코드를 변경하지 않으니,  OCP 또한 지켰다고 기대할 수 있다고 생각할 수 있지만, 실제로는 DIP, OCP 둘다 위반이다.
+discountPolicy변수를 보면 구현체가 아닌 DiscountPolicy Interface을 타입으로 받고 있으니 DIP를 지켰다고 할 수 있다. 또, 할인정책과 주문 서비스를 각각 분리해 역할을 나눴기 때문에, 할인정책 변경이 주문 서비스 코드를 변경하지 않으니 OCP 또한 지켰다고 기대할 수 있다고 생각할 수 있지만, 실제로는 DIP, OCP 둘다 위반이다.
 
 DiscountPolicy 인터페이스를 사용하고 있지만 실제로는 구체 클래스 FixDiscountPoliy를 의존하고 있으므로 DIP를 위반한다. 만약 고정 할인 대신 퍼센트 할인으로 정책이 변경된다면 주문 서비스의 코드 변경이 일어나므로 OCP 또한 위반이다.
 
@@ -161,10 +161,3 @@ IoC는 궁극적으로는 객체 간의 관심사 분리를 이루어 결합도�
 
 지금까지 DI/  IOC를 알아보았다. 이 기술들은 객체지향 원칙을 지키기 위한 것이기 때문에 스프링의 핵심 본질을 위해 꼭 필요하다고 생각된다. 왜 스프링의 핵심 기술들 중 가장 기본이자 핵심인지 알게 되었다. 다음은 실제로 IoC를 구현하기 위해 사용되는 Spring의 Container에 대해 더 알아보려고 한다.
 
-###
-
-### 참고
-
-[DI는 IoC를 사용하지 않아도 된다](https://jwchung.github.io/DI%EB%8A%94-IoC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%84%EB%8F%84-%EB%90%9C%EB%8B%A4)
-
-스프링 핵심 원리 - 기본편 (김영한)

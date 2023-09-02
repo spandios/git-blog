@@ -5,7 +5,7 @@
 ## Spring
 
 * [Core](spring/readme/README.md)
-  * [DI / IOC](spring/readme/ioc-di.md)
+  * [DI / IoC](spring/readme/ioc-di.md)
   * [Spring Container](spring/readme/spring-container/README.md)
     * [Component Scan](spring/readme/spring-container/component-scan.md)
     * [의존관계 자동주입](spring/readme/spring-container/autowired/README.md)
@@ -19,7 +19,6 @@
     * [Spring의 프록시](spring/readme/aop/spring.md)
     * [빈 후처리기](spring/readme/aop/undefined-1.md)
     * [스프링 AOP](spring/readme/aop/aop.md)
-* [JPA](spring/jpa.md)
 * [Security](spring/spring-security/README.md)
   * [Spring Security In Action](spring/spring-security/spring-security-in-action/README.md)
     * [스프링 시큐리티 기본 구성 맛보기](spring/spring-security/spring-security-in-action/undefined.md)
@@ -30,10 +29,6 @@
   * [Legacy](spring/spring-security/legacy/README.md)
     * [JWT 인증](spring/spring-security/legacy/undefined.md)
     * [인가](spring/spring-security/legacy/undefined-1.md)
-* [Observility](spring/observility/README.md)
-  * [OpenTelemetry](spring/observility/opentelemetry.md)
-* [Test](spring/test/README.md)
-  * [Kotest](spring/test/spring-rest-docs-swagger.md)
 * [Spring Boot 프로젝트 설정](spring/setting.md)
 
 ## Language
@@ -90,9 +85,6 @@
     * [예외](language/java/effective-java/undefined-7.md)
     * [동시성](language/java/effective-java/undefined-8.md)
     * [직렬화](language/java/effective-java/undefined-9.md)
-* [Javascript](language/javascript/README.md)
-  * [Javascript 엔진과 NonBlocking 동작원리](language/javascript/javascript-nonblocking.md)
-  * [실행 컨텍스트](language/javascript/undefined.md)
 
 ## Architecture
 
@@ -127,14 +119,6 @@
   * [Conventional Commit](devops/conventional-commit/README.md)
     * [Commit Hooks](devops/conventional-commit/commit-hooks.md)
     * [Senmantic Release](devops/conventional-commit/senmantic-release.md)
-  * [Flyway Migration](devops/flyway-migration.md)
-  * [Docker](devops/docker/README.md)
-    * [Volume](devops/docker/volume.md)
-  * [ECS](devops/ecs.md)
-  * [Kubernates](devops/kubernates/README.md)
-    * [EKS](devops/kubernates/eks/README.md)
-      * [Ingress](devops/kubernates/eks/ingress/README.md)
-        * [ALB](devops/kubernates/eks/ingress/alb.md)
 * [CS](cs/README.md)
   * [OOP](cs/oop/README.md)
     * [개요](cs/oop/undefined.md)
