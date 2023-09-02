@@ -2,9 +2,11 @@
 
 ## 객체지향 프로그래밍의 등장이유
 
-객체지향 프로그래밍 전에 절차지향 프로그래밍을 많이 사용했다고 한다. 절차지향이란 데이터와 기능을 명확히 분리하고 함수로 기능을 프로그래밍하는 방식이다.&#x20;
+과거 객체지향 프로그래밍 전에는 절차지향 프로그래밍을 많이 사용했습니다.&#x20;
 
-간단하고 복잡하지 않은 프로그래밍에는 적합하지만, 점점 복잡해지거나 규모가 커질수록 변경과 확장에 큰 어려움이 있다. 왜냐하면 데이터, 기능 위주로 설계를 했으며 서로 밀접하게 얽혀있어 강하게 결합되어 있기 때문이다.  때문에 사람들은 더 좋은 설계가 필요했고 때문에 객체지향 프로그래밍이 등장하였다.
+절차지향이란 데이터와 기능을 명확히 분리하고 함수로 기능을 프로그래밍하는 방식입니다.&#x20;
+
+점점 규모가 커지면서 주로 전역 상태로 데이터와 함수를 사용하다보니 각 기능들이 서로 밀접하게 얽히게 되어 유지보수가 힘든 어려움이 생깁니다. 이를 해결하기 위해 생겨난 것이 바로 객체지향 프로그래밍입니다.
 
 
 
@@ -12,29 +14,20 @@
 
 객체지향 프로그래밍을 한다는 것은 객체 스스로 책임있는 행동을 하며 다른 객체와 원할한 협력을 수행하는 객체들로 이루어진 공동체를 구성하는 것과 같다.&#x20;
 
-역할, 책임, 협력, SOLID로 유명한 5대원칙, 객체지향 3가지의 특성을 통해 객체지향을 이해해보도록 하자.
-
-\
-
-
-### **역할, 책임, 협력**
-
-역할과 책임, 협력이라는 관점을 통해 객체를 잘 설계하고 프로그래밍할 수 있다.&#x20;
+협력, 책임, 역할과 SOLID로 유명한 5대원칙을 통해 객체지향을 이해해보도록 하자
 
 
 
-* 협력
+## 협력
 
 어떤 객체가 기능 수행하던 중 책임이 없는 행동은 다른 객체(그 행동에 책임을 가지고 있는)에게 도움을 요청을 한다.
 
 요청을 받은 객체는 성실히 요청에 응답할(도울) 의무가 있다.
 
-기능 수행을 위해 서로 요청하고 응답하고 도와주는 것을 객체 간 협력이라고 한다.
-
-\
+기능 수행을 위해 서로 요청하고 응답하고 도와주는 것을 객체 간 협력이라고 한다.\
 
 
-* 책임
+## 책임
 
 요청과 응답에 의무가 있는 객체는 의무에 책임이 있다고 할 수 있다.&#x20;
 
@@ -46,10 +39,9 @@
 
 자율성이란 객체가 스스로 판단하고 행동을 취하는 것을 뜻한다. 실제 커피는 단지 마셔지는 수동적인 존재이지만, 객체지향에서의 커피는 소비하겠다는 요청을 받으면 스스로 이 요청에 대해 판단을 한 뒤 응답하는 자율적인 객체이다.
 
-\
 
 
-* 역할
+## 역할
 
 역할은 책임의 집합이다. 역할에 필요한 책임을 다 하는 객체는 언제든지 기존 객체를 대체할 수 있다.
 
@@ -59,19 +51,19 @@
 
 
 
-### **SOLID**
+## **SOLID**
 
 SOLID는 로버트 마틴이 객체지향 설계의 5가지 기본원칙을 마이클 패더스가 첫글자만 따서 기억하기 쉽게 소개한 것이라고 한다.
 
 
 
-1\. SRP(Single Responsibility Principle) - 단일책임원칙
+### 1. SRP(Single Responsibility Principle) - 단일책임원칙
 
 객체에 하나의 책임만을 부여해 변경이 일어나도 파급효과가 적게 설계해야한다.
 
 
 
-2\. OCP(Open-Closed Principle) - 개방폐쇠원칙
+### 2. OCP(Open-Closed Principle) - 개방폐쇠원칙
 
 확장에는 열려있으나 변경에는 닫혀 있어야한다.
 
@@ -79,7 +71,7 @@ SOLID는 로버트 마틴이 객체지향 설계의 5가지 기본원칙을 마�
 
 
 
-3\. LSP (Liskov Substitution Principle) - 리스코프 치환원칙
+### 3. LSP (Liskov Substitution Principle) - 리스코프 치환원칙
 
 다형성에 하위 클래스는 인터페이스 규약대로 정확히 지켜야한다.\
 
@@ -89,33 +81,91 @@ SOLID는 로버트 마틴이 객체지향 설계의 5가지 기본원칙을 마�
 범용 인터페이스 하나보다 특정 인터페이스로 나누어 명확하고 대체 가능한 인터페이스가 좋다.\
 
 
-5\. DIP(의존관계 역전 원칙)
+## 5.**DIP(Dependency Inversion Principal) -  의존관계 역전 원칙**&#x20;
 
-구체화 대신 추상화를 의존한다.
+고수준이 저수준에 의존하는 것을 역전 시켜 저수준이 고수준을 의존하게 하는 것입니다. 고수준이 바로 저수준을 의존하면 생기는 문제점을 본 뒤 DIP를 통해 해결해보겠습니다. 아래 예를 보시면 주문 서비스(고수준)가 Email 알림 서비스(저수준)를 의존하고 있습니다.
 
-프로그래머가 구현객체를 직접 생성하는 것이 아닌 IoC(Inversion of Control)컨테이너가 객체를 DI(Dependency Injection)하여 구현 객체를 의존하는 것이 아닌 인터페이스를 의존하게 설계한다.
+```typescript
+class OrderService {
+	private emailNotifier: EmailNotifier;
+    
+	constructor() {
+		this.emailNotifier = new EmailNotifier();
+	}
+    
+	function order(user: User): Order {
+		// order ~
+		emailNotifier.noti(user, "주문 완료");
+	}
+}
+```
+
+```typescript
+class EmailNotifier{
+	private emailService: EmailService
+    
+	function noti(user:User, message:string){
+		emailService.send(user.email, meesage)
+	}
+}
+```
 
 \
 
 
-### **객체지향 3가지 특성**
+<figure><img src="../../.gitbook/assets/img.png" alt=""><figcaption></figcaption></figure>
 
-1\. 다형성
+이 의존관계 방향은 변경하기 어려운 코드입니다. 구현체(저수준)을 교체하거나 변경이 발생하면 그 구현체를 의존하는 모든 곳에서 수정해야할 작업이 많이 발생합니다. 예를들어 이메일 대신 문자 알림해야한다는 요구사항이 생긴다면 어떻게 될까요? 주문 서비스에서 EmailNofier 관련된 모든 부분을 수정해야합니다.
 
-역할에 의존하여 역할에 충족하는 객체는 서로 대체 가능하게 조립 가능함으로써 변경에 유연함을 갖는다.\
+문제점을 해결 하기 위해 DIP를 적용하면 되고 추상화가 필요합니다. 아래 코드는 이제 저수준인 EmailService은 고수준인 Notifier 추상화를 의존하고 있습니다.&#x20;
 
+또, 더 이상 OrderService는 구현체 EmailNotifier에 의존하지 않고 같은 고수준 Notifier 추상화를 의존하고 있습니다. 추가적으로 의존성을 직접 생성하지 않고 생성자를 통해 주입받고 있는 것을 볼 수 있습니다.
 
-2\. 캡슐화
+```typescript
+class OrderService {
+	private notifer: Notifier;
+    
+	constructor(notifer: Notifier) {
+		this.notifier = notifer;
+	}
+    
+	order(user: User): Order {
+		// order ~
+		notifier.noti(user, "주문 완료");
+	}
+}
+```
 
-내부 구현코드를 숨겨 변경에 유연한 설계를 한다. 노출 될 필요 없는 요소는 숨겨 다른 개발자의 실수를 줄이고 보안성을 높인다.\
+```typescript
+class EmailNotifier : Notifer{
+	private emailService: EmailService
+    
+	noti(user:User, message:string){
+		emailService.send(user.email, meesage)
+	}
+}
 
+class SmsNotifier : Notifer{
+	private smsService: SmsService
+    
+	noti(user:User, message:string){
+		smsService.send(user.email, meesage)
+	}
+}
 
-3\. 상속&#x20;
+interface Notifer{
+	noti(user: User, message:string)
+}
 
-부모 클래스의 프로퍼티와 메서드를 물려 받아 재사용가능하고 오버라이딩을 통해 다형성을 만족한다.\
+```
 
+<figure><img src="../../.gitbook/assets/img (2).png" alt=""><figcaption></figcaption></figure>
 
-####
+이제 알림 방식이 문자 알림으로 변경이 되도 고수준 OrderService의 코드는 변경할 필요가 없어집니다.
+
+```typescript
+const orderService = new OrderService(smsNotifier);
+```
 
 ## 객체지향 설계방법
 
@@ -136,12 +186,7 @@ SOLID는 로버트 마틴이 객체지향 설계의 5가지 기본원칙을 마�
 
 이를 위해 인터페이스와 구현을 분리하여 자유롭게 메서드를 구현하고 변경할 수 있어야한다.
 
-\
 
-
-TDD와 함께 책임을 기반으로 객체지향 설계를 하고 SOLID 원칙도 참고하면 좋은 객체지향 프로그래밍을 할 수 있을 것 같다.
-
-다음 블로그는 위의 방식대로 실제 코드를 구현하여 연습해본 것을 주제로 써 봐야겠다.
 
 \
 
