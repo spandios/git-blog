@@ -8,7 +8,10 @@
   * [실행 컨텍스트](language/javascript/undefined.md)
   * [const와 let 그리고 호이스팅](language/javascript/const-let.md)
   * [클로저](language/javascript/undefined-1.md)
-* [Typescript](language/typescript.md)
+  * [프로토타입](language/javascript/undefined-2.md)
+  * [여러가지 비동기 처리 방법](language/javascript/undefined-3.md)
+* [Typescript](language/typescript/README.md)
+  * [Config 정리해보기](language/typescript/config.md)
 * [Kotlin](language/kotlin/README.md)
   * [Kotlin in Action](language/kotlin/kotlin-in-action/README.md)
     * [코틀린이란?](language/kotlin/kotlin-in-action/undefined.md)
@@ -66,10 +69,13 @@
 
 * [Page 4](node.js/page-4.md)
 * [NPM](node.js/npm.md)
+* [Module](node.js/module.md)
+* [Bundler](node.js/bundler.md)
 
-## React
+## frontend
 
-* [React](react/react.md)
+* [Page 1](frontend/page-1.md)
+* [React Rendering](frontend/react-rendering.md)
 
 ## Architecture
 
