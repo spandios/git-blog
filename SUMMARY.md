@@ -10,7 +10,7 @@
   * [클로저](language/javascript/undefined-1.md)
   * [프로토타입](language/javascript/undefined-2.md)
   * [여러가지 비동기 처리 방법](language/javascript/undefined-3.md)
-* [Typescript](language/typescript/README.md)
+* [Typescript](language/typescript.md)
   * [Config 정리해보기](language/typescript/config.md)
 * [Kotlin](language/kotlin/README.md)
   * [Kotlin in Action](language/kotlin/kotlin-in-action/README.md)
@@ -75,7 +75,7 @@
 ## frontend
 
 * [Page 1](frontend/page-1.md)
-* [React Rendering](frontend/react-rendering.md)
+* [React Rendering](react/react.md)
 
 ## Architecture
 
