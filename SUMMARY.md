@@ -6,7 +6,7 @@
 
 * [Javascript](language/javascript/README.md)
   * [실행 컨텍스트](language/javascript/undefined.md)
-  * [const와 let 그리고 호이스팅](language/javascript/const-let.md)
+  * [호이스팅 그리고 const let](language/javascript/const-let.md)
   * [클로저](language/javascript/undefined-1.md)
   * [프로토타입](language/javascript/undefined-2.md)
   * [여러가지 비동기 처리 방법](language/javascript/undefined-3.md)
