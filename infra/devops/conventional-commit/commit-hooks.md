@@ -60,7 +60,7 @@ chmod 774 commit-msg
 
 이제 컨벤션에 어긋난 메시지로 커밋을 하게 되면, 어디에서 오류가 발생했는지와 이유를 보여주고, 더 이상 커밋이 진행되지 않는다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-01-31 오후 3.55.45.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2023-01-31 오후 3.55.45.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -92,11 +92,11 @@ fi
 
 이제 커밋을 하면 test가 실행되며 케이스가 모두 통과되면 커밋이 완료 된다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-01-31 오후 4.37.49.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2023-01-31 오후 4.37.49.png" alt=""><figcaption></figcaption></figure>
 
 만약 테스트가 실패하면 커밋이 취소된다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-01-31 오후 4.48.27.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2023-01-31 오후 4.48.27.png" alt=""><figcaption></figcaption></figure>
 
 ### 정리&#x20;
 
