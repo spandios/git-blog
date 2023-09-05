@@ -59,13 +59,13 @@ function test(){
 
 ### 호이스팅이 발생한다.
 
-그래서 위의 예시처럼 아직 초기화되지 않은 변수에 접근해도 오류가 발생하지 않아&#x20;
+그래서 위의 예시처럼 아직 초기화되지 않은 변수에 접근해도 오류가 발생하지 않아 혼란이 발생한다.
 
 
 
 ### 스코프가 함수 레벨이다.
 
-보통의 프로그래밍 언어와 다르게 스코프 즉, 범위가 함수이기 때문에 혼란스러운 부분이 있다.
+보통의 프로그래밍 언어와 다르게 스코프가 함수 레벨이기 때문에 혼란스러운 부분이 있다.
 
 ```javascript
 
@@ -74,9 +74,9 @@ function test(){
     if(a == 1){
         var a = 2;
     }
-    console.log(a);
+    console.log(a); //2
 }
-test(); //2
+test(); 
 
 ```
 
@@ -84,13 +84,25 @@ test(); //2
 
 ### 변수를 중복 선언 가능하다.&#x20;
 
+놀랍게도 같은 변수를 같은 스코프에서 중복 선언해도 문제가 없다.
 
+```javascript
+
+function test(){
+    var a = 1;
+    var a = 2;
+    console.log(a); // 2
+}
+test();
+```
 
 
 
 ## const와 let
 
-위에서 봤듯이 var는 혼란스러운 점이 다수 있다. 당시 javascript 사용처가 그렇게 복잡하지 않은 환경이기 때문에 창시자가 저런 설계를 했던 것 같다. 하지만 js의 사용처가 점점 더 복잡해짐에 따라 단점이 더 부각되면서 보완 필요성이 생겼다. 그래서 es6부터 새로운 키워드인 const와 let이 탄생하게 된다.
+위에서 봤듯이 var는 혼란스러운 점이 다수 있다. 당시 javascript 사용처가 그렇게 복잡하지 않은 환경이기 때문에 창시자가 이런 설계를 했던 것 같다.&#x20;
+
+하지만 js의 사용처가 점점 더 복잡해짐에 따라 단점이 더 부각되면서 보완 필요성이 생겼다. 그래서 es6부터 새로운 키워드인 const와 let이 등장한다.
 
 
 
@@ -127,18 +139,72 @@ var는 호이스팅 시 선언과 동시에 초기화까지 진행된다. 그래
 
 이제 보통의 언어처럼 const,let은 블록 레벨의 스코프를 가진다.&#x20;
 
-```
+```javascript
+function test(){
+    const a = 1;
+    if(a == 1){
+        const a = 2;
+    }
+    console.log(a); // 1
+}
+test();
+
 ```
 
 
 
 ### 변수를 중복 선언하지 못한다.
 
+이제 보통의 언어처럼 같은 식별자를 중복 선언하지 못한다.
+
+```javascript
+function test(){
+    const a = 1;
+    const a = 1; // SyntaxError: Identifier 'a' has already been declared
+}
+test();
+
+```
+
 
 
 ### const 특징&#x20;
 
+const는 상수 값을 할당할 때 사용한다. 한번 값을 할당하면 변경하지 못하며, 반드시 선언과 함께 값을 할당해야한다.&#x20;
+
+```javascript
+const a = 1;
+a = 2; // Uncaught TypeError: Assignment to constant variable.
+
+const a; // Uncaught SyntaxError: Missing initializer in const declaration
+```
+
+데이터 영역이 바라보는 값은 불변이지만 객체의 프로퍼티까지 불변은 아닌 것을 인지하자.
+
+```javascript
+const test = { a: 1}
+test.a = 2; // 가능 
+const test2 = [];
+test2.push(1);
+
+test = {b : 1} // Uncaught TypeError: Assignment to constant variable.
+```
+
+만약 객체의 프로퍼티 값까지 불변으로 만들고 싶다면 Object.freeze()를 사용하자. (중첩 객체나 배열은 적용x)
+
+
+
 ### let 특징
+
+let은 var처럼 변수를 저장할 때 사용한다. const와 다르게 값을 변경할 수 있으며 선언과 함께 값을 할당하지 않아도 된다. 이 때는 undefined로 초기값이 할당된다.
+
+```javascript
+const a = 1;
+a = 2;
+
+const b; 
+console.log(b); // undefined
+```
 
 
 
