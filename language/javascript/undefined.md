@@ -31,7 +31,7 @@
 {% hint style="info" %}
 스코프 체인&#x20;
 
-스코프란 식별자에 대한 유효 범위이며, 어떤 식별자를 찾기 위해 가까운 LE에서 enviormentRecord에서 찾고 없으면 outerEnvironmnetReference를 통해 상위 environmentRecord를 찾는 것을 **스코프 체인**이라 한다.
+스코프란 식별자에 대한 유효 범위이며 어떤 식별자를 찾기 위해 가까운 LE의 enviormentRecord에서 찾고 만약 없으면 outerEnvironmnetReference에 접근해 상위 environmentRecord에서 다시 찾는 것을 **스코프 체인**이라 한다.
 
 최상위 outerEnviormentReference까지 찾고 찾지 못하면 undefined를 내놓는다.
 

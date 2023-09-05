@@ -74,7 +74,6 @@
 
 ## frontend
 
-* [Page 1](frontend/page-1.md)
 * [React Rendering](react/react.md)
 
 ## Architecture
